@@ -1,135 +1,180 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ydc-Fb-eCe">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="W5Q-LD-8OW">
+        <!--My Pets-->
+        <scene sceneID="bLU-Db-z0e">
             <objects>
-                <viewController id="NXK-pP-BBP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Oxb-jn-Cw1"/>
-                        <viewControllerLayoutGuide type="bottom" id="XaM-k0-Np6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1XK-BT-h2S">
+                <tableViewController title="My Pets" id="PVf-iY-jTe" customClass="MyPetsTableViewController" customModule="petsitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OeZ-k4-dOi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H9A-jk-Hen">
-                                <rect key="frame" x="0.0" y="70" width="600" height="481"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZeD-6f-ISR">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZeD-6f-ISR" id="NwJ-Oy-fhH">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6j-NE-6B1">
-                                <rect key="frame" x="526" y="28" width="46" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="+"/>
-                            </button>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="H9A-jk-Hen" secondAttribute="trailing" id="4wU-BN-fvE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="O6j-NE-6B1" secondAttribute="trailing" id="KEF-Ip-51E"/>
-                            <constraint firstItem="H9A-jk-Hen" firstAttribute="top" secondItem="Oxb-jn-Cw1" secondAttribute="bottom" constant="50" id="PJ8-ah-dgc"/>
-                            <constraint firstItem="O6j-NE-6B1" firstAttribute="top" secondItem="Oxb-jn-Cw1" secondAttribute="bottom" constant="10" id="dDd-Sd-KNX"/>
-                            <constraint firstItem="XaM-k0-Np6" firstAttribute="top" secondItem="H9A-jk-Hen" secondAttribute="bottom" id="eeL-u5-Fdc"/>
-                            <constraint firstItem="H9A-jk-Hen" firstAttribute="leading" secondItem="1XK-BT-h2S" secondAttribute="leading" id="ewZ-DI-OVq"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="p1Q-j1-2bt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a2s-vz-3ch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" id="OtT-KB-7Pt">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OtT-KB-7Pt" id="uIA-w0-Cjk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="q5m-Ej-ZTE" kind="show" id="3O3-Kt-l6U"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PVf-iY-jTe" id="G4A-T7-AN8"/>
+                            <outlet property="delegate" destination="PVf-iY-jTe" id="kfu-NA-MlQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Pets" id="eDL-AI-8z0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jMm-Ky-U3T">
+                            <connections>
+                                <segue destination="q5m-Ej-ZTE" kind="show" id="zEB-gg-jKc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBV-yF-uIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="821"/>
+            <point key="canvasLocation" x="302" y="-38"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="LQS-Di-cD2">
+        <!--Add Pet-->
+        <scene sceneID="Fud-4D-Ao5">
             <objects>
-                <viewController id="tRf-Qp-vSi" sceneMemberID="viewController">
+                <viewController title="Add Pet" id="q5m-Ej-ZTE" customClass="AddPetViewController" customModule="petsitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="akh-g7-D2a"/>
-                        <viewControllerLayoutGuide type="bottom" id="ATR-VH-daQ"/>
+                        <viewControllerLayoutGuide type="top" id="Pe1-aD-p1l"/>
+                        <viewControllerLayoutGuide type="bottom" id="8G0-lU-YTg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Q5F-Ha-bWD">
+                    <view key="view" contentMode="scaleToFill" id="b7R-T8-BWa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NAW-3M-XCm">
-                                <rect key="frame" x="0.0" y="70" width="600" height="481"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="28" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-eE-rEn">
+                                <rect key="frame" x="175" y="164" width="250" height="29"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Pte-HP-dwP">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pte-HP-dwP" id="XnW-rR-CPX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-qc-XD5">
-                                <rect key="frame" x="534" y="32" width="46" height="30"/>
+                                <segments>
+                                    <segment title="Info"/>
+                                    <segment title="Log"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8c-XM-k8R">
+                                <rect key="frame" x="70" y="89" width="56" height="48"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="+"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NAW-3M-XCm" firstAttribute="leading" secondItem="Q5F-Ha-bWD" secondAttribute="leading" id="1QG-d3-cEN"/>
-                            <constraint firstAttribute="trailing" secondItem="NAW-3M-XCm" secondAttribute="trailing" id="Dxc-fB-hu3"/>
-                            <constraint firstItem="ATR-VH-daQ" firstAttribute="top" secondItem="NAW-3M-XCm" secondAttribute="bottom" id="I8z-Qs-huJ"/>
-                            <constraint firstItem="NAW-3M-XCm" firstAttribute="top" secondItem="akh-g7-D2a" secondAttribute="bottom" constant="50" id="TZB-zl-Txd"/>
-                            <constraint firstItem="0IW-qc-XD5" firstAttribute="top" secondItem="akh-g7-D2a" secondAttribute="bottom" constant="10" id="lgq-gt-gZ9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0IW-qc-XD5" secondAttribute="trailing" id="mqg-rI-lIv"/>
+                            <constraint firstItem="X8c-XM-k8R" firstAttribute="top" secondItem="Pe1-aD-p1l" secondAttribute="bottom" constant="25" id="IQa-Jz-7hy"/>
+                            <constraint firstItem="6DC-eE-rEn" firstAttribute="centerX" secondItem="b7R-T8-BWa" secondAttribute="centerX" id="MTC-6A-SoP"/>
+                            <constraint firstItem="X8c-XM-k8R" firstAttribute="leading" secondItem="b7R-T8-BWa" secondAttribute="leadingMargin" constant="50" id="ZOZ-VI-Ggg"/>
+                            <constraint firstItem="6DC-eE-rEn" firstAttribute="top" secondItem="Pe1-aD-p1l" secondAttribute="bottom" constant="100" id="bfd-0M-ESf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="2O5-L5-45J"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Md0-0V-02u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqB-QH-vmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="161"/>
+            <point key="canvasLocation" x="1066" y="-38"/>
+        </scene>
+        <!--Pets I'm Caring For-->
+        <scene sceneID="DH8-m8-Dl1">
+            <objects>
+                <tableViewController id="GEv-On-0GY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jgg-Kv-AAJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cI5-Jj-2v0">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cI5-Jj-2v0" id="Wpp-6h-uLT">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GEv-On-0GY" id="bs7-pU-Fab"/>
+                            <outlet property="delegate" destination="GEv-On-0GY" id="PjG-sX-NQj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pets I'm Caring For" id="C1d-7t-z8y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imh-Ef-AHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="870"/>
+        </scene>
+        <!--Pets I'm Caring For-->
+        <scene sceneID="evy-Yp-PIO">
+            <objects>
+                <navigationController id="T82-He-A74" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pets I'm Caring For" id="rct-tq-It1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LnD-jB-2e3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GEv-On-0GY" kind="relationship" relationship="rootViewController" id="UYQ-52-Dxj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ky-uO-5cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-518" y="869"/>
+        </scene>
+        <!--myPets-->
+        <scene sceneID="2mZ-WL-COo">
+            <objects>
+                <navigationController id="u9a-h1-2K0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="myPets" id="DMC-zJ-wYO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3es-mE-3j2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PVf-iY-jTe" kind="relationship" relationship="rootViewController" id="OTP-dY-3wA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vmp-qC-TOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-518" y="-39"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="G8H-w9-8D4">
+        <scene sceneID="6uS-yl-kX1">
             <objects>
-                <tabBarController id="aqi-7z-7iy" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="nOz-Wv-Ck5">
+                <tabBarController id="Ydc-Fb-eCe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="rOp-Nx-ClZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tRf-Qp-vSi" kind="relationship" relationship="viewControllers" id="H39-Qn-zJp"/>
-                        <segue destination="NXK-pP-BBP" kind="relationship" relationship="viewControllers" id="7gF-ex-R3u"/>
+                        <segue destination="u9a-h1-2K0" kind="relationship" relationship="viewControllers" id="1oB-WM-qJo"/>
+                        <segue destination="T82-He-A74" kind="relationship" relationship="viewControllers" id="S7J-bV-umP"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fa9-d1-0hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyB-Kb-7TY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="491"/>
+            <point key="canvasLocation" x="-1344" y="475"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zEB-gg-jKc"/>
+    </inferredMetricsTieBreakers>
 </document>
