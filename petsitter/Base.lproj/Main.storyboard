@@ -60,27 +60,141 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="28" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-eE-rEn">
-                                <rect key="frame" x="175" y="164" width="250" height="29"/>
+                                <rect key="frame" x="40" y="164" width="520" height="29"/>
                                 <animations/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <segments>
                                     <segment title="Info"/>
                                     <segment title="Log"/>
                                 </segments>
+                                <connections>
+                                    <action selector="logPressed:" destination="q5m-Ej-ZTE" eventType="valueChanged" id="xwZ-X3-Leb"/>
+                                </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8c-XM-k8R">
                                 <rect key="frame" x="70" y="89" width="56" height="48"/>
                                 <animations/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add personality info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUp-Su-Dmf">
+                                <rect key="frame" x="106" y="208" width="136.5" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add activity instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhJ-JM-hdW">
+                                <rect key="frame" x="106" y="318" width="165.5" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add photo / video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ly-RY-bcZ">
+                                <rect key="frame" x="105.5" y="428.5" width="122" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-ZV-T5E">
+                                <rect key="frame" x="42" y="206" width="22" height="22"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="addPersonalityInfoButton:" destination="q5m-Ej-ZTE" eventType="touchUpInside" id="BZx-eZ-uJp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJs-id-EnI">
+                                <rect key="frame" x="42" y="261" width="22" height="22"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="addFeedingInstructionsButton:" destination="q5m-Ej-ZTE" eventType="touchUpInside" id="Qee-Rn-mgb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3B-GW-irS">
+                                <rect key="frame" x="42" y="316" width="22" height="22"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="addActivityInstructionsButton:" destination="q5m-Ej-ZTE" eventType="touchUpInside" id="LEN-9C-ZyU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm5-7X-dzi">
+                                <rect key="frame" x="42" y="371" width="22" height="22"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="addEmergencyContactButton:" destination="q5m-Ej-ZTE" eventType="touchUpInside" id="ZXW-lp-0zK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8V-VE-xE0">
+                                <rect key="frame" x="42" y="425" width="22" height="22"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="addPhotoVideoButton:" destination="q5m-Ej-ZTE" eventType="touchUpInside" id="33L-bY-Q6m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add emergency contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udF-T2-xhq">
+                                <rect key="frame" x="105" y="373" width="164.5" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add feeding instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCc-os-tr3">
+                                <rect key="frame" x="106" y="263" width="167.5" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="udF-T2-xhq" firstAttribute="centerX" secondItem="ZhJ-JM-hdW" secondAttribute="centerX" id="1h7-3J-PnX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6DC-eE-rEn" secondAttribute="trailing" constant="20" id="33E-K2-k5X"/>
+                            <constraint firstItem="xCc-os-tr3" firstAttribute="centerX" secondItem="bUp-Su-Dmf" secondAttribute="centerX" id="5pO-By-4ri"/>
+                            <constraint firstItem="N3B-GW-irS" firstAttribute="centerX" secondItem="PJs-id-EnI" secondAttribute="centerX" id="C3E-sb-UDc"/>
+                            <constraint firstItem="K0Z-ZV-T5E" firstAttribute="leading" secondItem="b7R-T8-BWa" secondAttribute="leadingMargin" constant="10" id="GHD-OK-iUR"/>
+                            <constraint firstItem="zm5-7X-dzi" firstAttribute="centerX" secondItem="N3B-GW-irS" secondAttribute="centerX" id="Gpx-Lg-Dev"/>
                             <constraint firstItem="X8c-XM-k8R" firstAttribute="top" secondItem="Pe1-aD-p1l" secondAttribute="bottom" constant="25" id="IQa-Jz-7hy"/>
+                            <constraint firstItem="zm5-7X-dzi" firstAttribute="top" secondItem="N3B-GW-irS" secondAttribute="bottom" constant="25" id="JSg-Ld-YuT"/>
+                            <constraint firstItem="ZhJ-JM-hdW" firstAttribute="leading" secondItem="N3B-GW-irS" secondAttribute="trailing" constant="30" id="Jag-iq-LB7"/>
+                            <constraint firstItem="PJs-id-EnI" firstAttribute="top" secondItem="K0Z-ZV-T5E" secondAttribute="bottom" constant="25" id="KsB-9z-u5a"/>
                             <constraint firstItem="6DC-eE-rEn" firstAttribute="centerX" secondItem="b7R-T8-BWa" secondAttribute="centerX" id="MTC-6A-SoP"/>
+                            <constraint firstItem="7Ly-RY-bcZ" firstAttribute="centerX" secondItem="udF-T2-xhq" secondAttribute="centerX" id="NGH-dh-F4M"/>
+                            <constraint firstItem="ZhJ-JM-hdW" firstAttribute="centerY" secondItem="N3B-GW-irS" secondAttribute="centerY" id="ShC-gc-qzB"/>
+                            <constraint firstItem="K0Z-ZV-T5E" firstAttribute="top" secondItem="6DC-eE-rEn" secondAttribute="bottom" constant="25" id="VFL-TF-vJS"/>
+                            <constraint firstItem="xCc-os-tr3" firstAttribute="leading" secondItem="PJs-id-EnI" secondAttribute="trailing" constant="30" id="XBW-e1-9f7"/>
+                            <constraint firstItem="x8V-VE-xE0" firstAttribute="centerX" secondItem="zm5-7X-dzi" secondAttribute="centerX" id="Y3M-Dj-FaX"/>
                             <constraint firstItem="X8c-XM-k8R" firstAttribute="leading" secondItem="b7R-T8-BWa" secondAttribute="leadingMargin" constant="50" id="ZOZ-VI-Ggg"/>
+                            <constraint firstItem="N3B-GW-irS" firstAttribute="top" secondItem="PJs-id-EnI" secondAttribute="bottom" constant="25" id="ZgK-mb-Q8F"/>
                             <constraint firstItem="6DC-eE-rEn" firstAttribute="top" secondItem="Pe1-aD-p1l" secondAttribute="bottom" constant="100" id="bfd-0M-ESf"/>
+                            <constraint firstItem="ZhJ-JM-hdW" firstAttribute="centerX" secondItem="xCc-os-tr3" secondAttribute="centerX" id="cDk-hR-m9H"/>
+                            <constraint firstItem="7Ly-RY-bcZ" firstAttribute="leading" secondItem="x8V-VE-xE0" secondAttribute="trailing" constant="29.5" id="jAD-Yc-bvG"/>
+                            <constraint firstItem="PJs-id-EnI" firstAttribute="centerX" secondItem="K0Z-ZV-T5E" secondAttribute="centerX" id="jSw-XC-cWX"/>
+                            <constraint firstItem="xCc-os-tr3" firstAttribute="centerY" secondItem="PJs-id-EnI" secondAttribute="centerY" id="jT0-Pe-ujd"/>
+                            <constraint firstItem="bUp-Su-Dmf" firstAttribute="leading" secondItem="K0Z-ZV-T5E" secondAttribute="trailing" constant="30" id="jkG-jn-W9e"/>
+                            <constraint firstItem="udF-T2-xhq" firstAttribute="centerY" secondItem="zm5-7X-dzi" secondAttribute="centerY" id="lyI-jm-5Y6"/>
+                            <constraint firstItem="bUp-Su-Dmf" firstAttribute="centerY" secondItem="K0Z-ZV-T5E" secondAttribute="centerY" id="o4U-2M-TLs"/>
+                            <constraint firstItem="udF-T2-xhq" firstAttribute="leading" secondItem="zm5-7X-dzi" secondAttribute="trailing" constant="29" id="vJ3-43-FPf"/>
+                            <constraint firstItem="7Ly-RY-bcZ" firstAttribute="centerY" secondItem="x8V-VE-xE0" secondAttribute="centerY" id="xWZ-vi-2Qo"/>
+                            <constraint firstItem="x8V-VE-xE0" firstAttribute="top" secondItem="zm5-7X-dzi" secondAttribute="bottom" constant="25" id="yhX-1R-Ccp"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5pO-By-4ri"/>
+                                <exclude reference="cDk-hR-m9H"/>
+                                <exclude reference="1h7-3J-PnX"/>
+                                <exclude reference="NGH-dh-F4M"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="activityInstructions" destination="ZhJ-JM-hdW" id="Y8u-nt-Oso"/>
+                        <outlet property="addPhotoVideo" destination="7Ly-RY-bcZ" id="uVs-rH-RUg"/>
+                        <outlet property="emergencyContact" destination="udF-T2-xhq" id="1q0-96-hHS"/>
+                        <outlet property="feedingInstructions" destination="xCc-os-tr3" id="KUo-Ma-AfF"/>
+                        <outlet property="personalityLabel" destination="bUp-Su-Dmf" id="gwx-YN-usR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqB-QH-vmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
