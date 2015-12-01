@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C301C0D42520031B13D /* AudioToolbox.framework */; };
 		955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C53F11BF516A000F6E4CE /* AppDelegate.swift */; };
 		955C53F71BF516A100F6E4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955C53F51BF516A100F6E4CE /* Main.storyboard */; };
 		955C53FA1BF516A100F6E4CE /* petsitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955C53F81BF516A100F6E4CE /* petsitter.xcdatamodeld */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67926C301C0D42520031B13D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		955C53EE1BF516A000F6E4CE /* petsitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petsitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		955C53F11BF516A000F6E4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		955C53F61BF516A100F6E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		67068FA31C0AD664005C88C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67926C301C0D42520031B13D /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
