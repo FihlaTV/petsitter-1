@@ -44,11 +44,14 @@ class AddPetViewController: UIViewController {
     @IBAction func addPhotoVideoButton(sender: AnyObject) {
     }
     
-    
-    // Segment Buttons
-    @IBAction func segmentChanged(sender: AnyObject) {
+    // Done button clicked
+    @IBAction func barButtonItemClicked(send: AnyObject) {
     
     }
+    @IBAction func segmentChanged(sender: AnyObject) {
+    }
+    
+  
     
     
     
