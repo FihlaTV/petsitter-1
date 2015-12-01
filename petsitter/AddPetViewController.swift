@@ -15,10 +15,12 @@ class AddPetViewController: UIViewController {
     @IBOutlet weak var activityInstructions: UILabel!
     @IBOutlet weak var emergencyContact: UILabel!
     @IBOutlet weak var addPhotoVideo: UILabel!
+    @IBOutlet weak var segmentBar: UISegmentedControl!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        segmentBar.hidden = true
         self.navigationItem.setRightBarButtonItem(UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "barButtonItemClicked:"), animated: true)
         // Do any additional setup after loading the view.
     }
