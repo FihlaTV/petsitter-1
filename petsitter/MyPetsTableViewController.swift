@@ -7,95 +7,152 @@
 //
 
 import UIKit
+import CoreData
+import Parse
+import Bolts
 
 class MyPetsTableViewController: UITableViewController {
     
-    var  pets = [String]()
-    var newPet: String = ""
+    
+    var corePets = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        pets = ["Chico","Roxy","Amy"]
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        loadPets()
+        tableView.reloadData()
+    }
+    
+    
+    func loadPets(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName:"Pet")
+        
+        do {
+            let fetchedResults =
+            try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            
+            if let results = fetchedResults {
+                corePets = results
+            } else {
+                print("Could not fetch pets")
+            }
+        } catch {
+            return
+        }
+    }
+    
+    func deletePetAtIndex(index: Int){
+        if (index < corePets.count){
+            let corePet = corePets[index]
+            
+            corePets.removeAtIndex(index)
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            managedContext.deleteObject(corePet)
+            // Complete save and handle potential error
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save \(error), \(error.userInfo)")
+            }
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return pets.count
+        return corePets.count
     }
-
     
+    // will pull all of the user's pets from core data
+    // ============================================================
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("petCell", forIndexPath: indexPath)
-
-        // Configure the cell...
-        cell.textLabel!.text = pets[indexPath.row]
-
+        var pet_pic = [PFFile]()
+        let cell = tableView.dequeueReusableCellWithIdentifier("petCell", forIndexPath: indexPath) as!PetTableViewCell
+        
+        let corePet = corePets[indexPath.row]
+        let petKey = corePet.valueForKey("pet_key") as! String
+        let petName = corePet.valueForKey("pet_name") as! String
+        
+        
+        let query = PFQuery(className: "Pet")
+        query.whereKey("objectId", equalTo: petKey)
+        query.getFirstObjectInBackgroundWithBlock {
+            (object: PFObject?, error: NSError?) -> Void in
+            if error != nil || object == nil {
+                print("The getFirstObject request failed inside of the myPetsTVC, in cell function.")
+            } else {
+                //Retrieves the picture as a PFFile "parse framework file"
+                pet_pic.append(object?["pet_profile_pic"] as! PFFile)
+                print(pet_pic)
+                //extra step required to transform the pffile object into a uiimage
+                pet_pic[0].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
+                    if error == nil {
+                        let image = UIImage(data: imageData!)
+                        cell.petImage.image = image
+                    }
+                }
+            }
+            
+        }
+        
+        //this is where we continue
+        
+        cell.nameLabel.text = petName
+        
+        
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
+    // ============================================================
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            // this section will delete the pet from the data base
+            //==========================================================
+            let corePet = corePets[indexPath.row]
+            let key_for_Delete = corePet.valueForKey("pet_key") as! String
+            let query = PFQuery(className: "Pet")
+            query.whereKey("objectId", equalTo: key_for_Delete)
+            query.getFirstObjectInBackgroundWithBlock {
+                (object: PFObject?, error: NSError?) -> Void in
+                if error != nil || object == nil {
+                    print("The getFirstObject request failed in my pets table view controller.")
+                } else {
+                    // The find succeeded and now will delete the object in the database.
+                    print("Delete started")
+                    object?.deleteInBackground()
+                    
+                    // Delete the row from the core data source
+                    // =============================================================
+                    self.deletePetAtIndex(indexPath.row)
+                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    //============================================================
+                }
+                
+            }
+            // ============================================================
+            
+            
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
