@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Key to the repository, where I'm storing the data for our app.
+        Parse.setApplicationId("epBrGZNjQNbDIMp5qaOfDZGKCz88rxDJLrGCUWa7", clientKey: "tprim3FBXR7QokXnWtv44WQ16K0DtWw49XDARMvH")
         return true
     }
 
