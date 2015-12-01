@@ -28,21 +28,6 @@ class AddPetViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // edit buttons
-    @IBAction func addPersonalityInfoButton(sender: AnyObject) {
-    }
-    
-    @IBAction func addFeedingInstructionsButton(sender: AnyObject) {
-    }
-    
-    @IBAction func addActivityInstructionsButton(sender: AnyObject) {
-    }
-    
-    @IBAction func addEmergencyContactButton(sender: AnyObject) {
-    }
-    
-    @IBAction func addPhotoVideoButton(sender: AnyObject) {
-    }
     
     // Done button clicked
     @IBAction func barButtonItemClicked(send: AnyObject) {
