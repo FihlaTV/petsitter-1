@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673E529D1C0EAF1F006F312A /* PetSitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673E529C1C0EAF1F006F312A /* PetSitTableViewController.swift */; };
 		67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C301C0D42520031B13D /* AudioToolbox.framework */; };
 		67926C331C0D43440031B13D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C321C0D43440031B13D /* CFNetwork.framework */; };
 		67926C351C0D434F0031B13D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C341C0D434F0031B13D /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		673E529C1C0EAF1F006F312A /* PetSitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetSitTableViewController.swift; sourceTree = "<group>"; };
 		67926C301C0D42520031B13D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		67926C321C0D43440031B13D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		67926C341C0D434F0031B13D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,6 +150,7 @@
 				95C52EEB1BFE576700C136E0 /* AddPetViewController.swift */,
 				95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */,
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
+				673E529C1C0EAF1F006F312A /* PetSitTableViewController.swift */,
 			);
 			path = petsitter;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				95C52EEC1BFE576700C136E0 /* AddPetViewController.swift in Sources */,
 				955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */,
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
+				673E529D1C0EAF1F006F312A /* PetSitTableViewController.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
