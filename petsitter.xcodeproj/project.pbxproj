@@ -7,16 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673E529E1C0EB86A006F312A /* PetCreationViewController.swift */; };
-		673E52A21C0EB9A4006F312A /* paw-print-outline_318-35039.png in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */; };
-		673E52A41C0EBA56006F312A /* mypetspawprint_720.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */; };
-		673E52A61C0EBA62006F312A /* petsimcaringforhands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */; };
-		673E52A81C0EBE89006F312A /* test_icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A71C0EBE89006F312A /* test_icon.jpeg */; };
-		675860811C0FE35C006B59EF /* PetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675860801C0FE35C006B59EF /* PetInfoViewController.swift */; };
-		675869E31C0FF0DB006B59EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675869E21C0FF0DB006B59EF /* Main.storyboard */; };
-		675869E51C0FF18E006B59EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */; };
-		675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */; };
-		676F14D21C0E2BBA00BE1302 /* PetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */; };
+		01C172C71C0FF4AC00412CA7 /* welcomerect.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172C61C0FF4AC00412CA7 /* welcomerect.png */; };
+		01C172CD1C10CB4B00412CA7 /* welcomehands.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172CC1C10CB4B00412CA7 /* welcomehands.png */; };
+		01C172CF1C10CB4F00412CA7 /* welcomepaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172CE1C10CB4F00412CA7 /* welcomepaw.png */; };
+		01C172D11C10CB5400412CA7 /* welcomemountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172D01C10CB5400412CA7 /* welcomemountain.png */; };
+		01CBEBA91C10D373000F1867 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBEBA81C10D373000F1867 /* WelcomeViewController.swift */; };
 		67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C301C0D42520031B13D /* AudioToolbox.framework */; };
 		67926C331C0D43440031B13D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C321C0D43440031B13D /* CFNetwork.framework */; };
 		67926C351C0D434F0031B13D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C341C0D434F0031B13D /* CoreGraphics.framework */; };
@@ -31,8 +26,12 @@
 		67926C471C0D43A70031B13D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C461C0D43A70031B13D /* Parse.framework */; };
 		67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67926C481C0D45780031B13D /* PetTableViewCell.swift */; };
 		955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C53F11BF516A000F6E4CE /* AppDelegate.swift */; };
+		955C53F71BF516A100F6E4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955C53F51BF516A100F6E4CE /* Main.storyboard */; };
+		955C53FA1BF516A100F6E4CE /* petsitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955C53F81BF516A100F6E4CE /* petsitter.xcdatamodeld */; };
 		955C53FC1BF516A100F6E4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955C53FB1BF516A100F6E4CE /* Assets.xcassets */; };
+		955C53FF1BF516A100F6E4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955C53FD1BF516A100F6E4CE /* LaunchScreen.storyboard */; };
 		955C540A1BF516A100F6E4CE /* petsitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C54091BF516A100F6E4CE /* petsitterTests.swift */; };
+		95C52EEC1BFE576700C136E0 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C52EEB1BFE576700C136E0 /* AddPetViewController.swift */; };
 		95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,17 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		673E529E1C0EB86A006F312A /* PetCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCreationViewController.swift; sourceTree = "<group>"; };
-		673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paw-print-outline_318-35039.png"; sourceTree = "<group>"; };
-		673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mypetspawprint_720.jpg; sourceTree = "<group>"; };
-		673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petsimcaringforhands.jpg; sourceTree = "<group>"; };
-		673E52A71C0EBE89006F312A /* test_icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_icon.jpeg; sourceTree = "<group>"; };
-		675860801C0FE35C006B59EF /* PetInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetInfoViewController.swift; sourceTree = "<group>"; };
-		675869E21C0FF0DB006B59EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		675869E71C0FF238006B59EF /* petsitter 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "petsitter 2.xcdatamodel"; sourceTree = "<group>"; };
-		675869E81C0FF238006B59EF /* petsitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = petsitter.xcdatamodel; sourceTree = "<group>"; };
-		676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetProfileViewController.swift; sourceTree = "<group>"; };
+		01C172C61C0FF4AC00412CA7 /* welcomerect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomerect.png; sourceTree = "<group>"; };
+		01C172CC1C10CB4B00412CA7 /* welcomehands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomehands.png; sourceTree = "<group>"; };
+		01C172CE1C10CB4F00412CA7 /* welcomepaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomepaw.png; sourceTree = "<group>"; };
+		01C172D01C10CB5400412CA7 /* welcomemountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomemountain.png; sourceTree = "<group>"; };
+		01CBEBA81C10D373000F1867 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../WelcomeViewController.swift; sourceTree = "<group>"; };
 		67926C301C0D42520031B13D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		67926C321C0D43440031B13D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		67926C341C0D434F0031B13D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,11 +66,15 @@
 		67926C481C0D45780031B13D /* PetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
 		955C53EE1BF516A000F6E4CE /* petsitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petsitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		955C53F11BF516A000F6E4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		955C53F61BF516A100F6E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		955C53F91BF516A100F6E4CE /* petsitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = petsitter.xcdatamodel; sourceTree = "<group>"; };
 		955C53FB1BF516A100F6E4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		955C53FE1BF516A100F6E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		955C54001BF516A100F6E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		955C54051BF516A100F6E4CE /* petsitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petsitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		955C54091BF516A100F6E4CE /* petsitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petsitterTests.swift; sourceTree = "<group>"; };
 		955C540B1BF516A100F6E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95C52EEB1BFE576700C136E0 /* AddPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
 		95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01C172BF1C0FDCE300412CA7 /* welcome photos */ = {
+			isa = PBXGroup;
+			children = (
+				01C172C61C0FF4AC00412CA7 /* welcomerect.png */,
+				01C172CE1C10CB4F00412CA7 /* welcomepaw.png */,
+				01C172D01C10CB5400412CA7 /* welcomemountain.png */,
+				01C172CC1C10CB4B00412CA7 /* welcomehands.png */,
+			);
+			path = "welcome photos";
+			sourceTree = "<group>";
+		};
 		67068FA31C0AD664005C88C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,21 +138,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		673E52A01C0EB985006F312A /* Images/icons */ = {
-			isa = PBXGroup;
-			children = (
-				673E52A71C0EBE89006F312A /* test_icon.jpeg */,
-				673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */,
-				673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */,
-				673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */,
-			);
-			name = Images/icons;
-			sourceTree = "<group>";
-		};
 		955C53E51BF516A000F6E4CE = {
 			isa = PBXGroup;
 			children = (
-				673E52A01C0EB985006F312A /* Images/icons */,
 				67068FA31C0AD664005C88C9 /* Frameworks */,
 				955C53F01BF516A000F6E4CE /* petsitter */,
 				955C54081BF516A100F6E4CE /* petsitterTests */,
@@ -165,15 +161,15 @@
 			isa = PBXGroup;
 			children = (
 				955C53F11BF516A000F6E4CE /* AppDelegate.swift */,
+				955C53F51BF516A100F6E4CE /* Main.storyboard */,
+				01C172BF1C0FDCE300412CA7 /* welcome photos */,
 				955C53FB1BF516A100F6E4CE /* Assets.xcassets */,
-				675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */,
-				675869E21C0FF0DB006B59EF /* Main.storyboard */,
+				955C53FD1BF516A100F6E4CE /* LaunchScreen.storyboard */,
 				955C54001BF516A100F6E4CE /* Info.plist */,
-				675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */,
-				673E529E1C0EB86A006F312A /* PetCreationViewController.swift */,
+				955C53F81BF516A100F6E4CE /* petsitter.xcdatamodeld */,
+				01CBEBA81C10D373000F1867 /* WelcomeViewController.swift */,
+				95C52EEB1BFE576700C136E0 /* AddPetViewController.swift */,
 				95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */,
-				675860801C0FE35C006B59EF /* PetInfoViewController.swift */,
-				676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */,
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
 			);
 			path = petsitter;
@@ -271,13 +267,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				675869E31C0FF0DB006B59EF /* Main.storyboard in Resources */,
-				673E52A21C0EB9A4006F312A /* paw-print-outline_318-35039.png in Resources */,
+				01C172D11C10CB5400412CA7 /* welcomemountain.png in Resources */,
+				955C53FF1BF516A100F6E4CE /* LaunchScreen.storyboard in Resources */,
 				955C53FC1BF516A100F6E4CE /* Assets.xcassets in Resources */,
-				673E52A41C0EBA56006F312A /* mypetspawprint_720.jpg in Resources */,
-				675869E51C0FF18E006B59EF /* LaunchScreen.storyboard in Resources */,
-				673E52A61C0EBA62006F312A /* petsimcaringforhands.jpg in Resources */,
-				673E52A81C0EBE89006F312A /* test_icon.jpeg in Resources */,
+				01C172CD1C10CB4B00412CA7 /* welcomehands.png in Resources */,
+				01C172CF1C10CB4F00412CA7 /* welcomepaw.png in Resources */,
+				01C172C71C0FF4AC00412CA7 /* welcomerect.png in Resources */,
+				955C53F71BF516A100F6E4CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,13 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676F14D21C0E2BBA00BE1302 /* PetProfileViewController.swift in Sources */,
-				675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */,
+				955C53FA1BF516A100F6E4CE /* petsitter.xcdatamodeld in Sources */,
+				95C52EEC1BFE576700C136E0 /* AddPetViewController.swift in Sources */,
 				955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */,
+				01CBEBA91C10D373000F1867 /* WelcomeViewController.swift in Sources */,
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
-				673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */,
-				675860811C0FE35C006B59EF /* PetInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +317,25 @@
 			targetProxy = 955C54061BF516A100F6E4CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		955C53F51BF516A100F6E4CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				955C53F61BF516A100F6E4CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		955C53FD1BF516A100F6E4CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				955C53FE1BF516A100F6E4CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		955C540C1BF516A100F6E4CE /* Debug */ = {
@@ -492,13 +506,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */ = {
+		955C53F81BF516A100F6E4CE /* petsitter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				675869E71C0FF238006B59EF /* petsitter 2.xcdatamodel */,
-				675869E81C0FF238006B59EF /* petsitter.xcdatamodel */,
+				955C53F91BF516A100F6E4CE /* petsitter.xcdatamodel */,
 			);
-			currentVersion = 675869E81C0FF238006B59EF /* petsitter.xcdatamodel */;
+			currentVersion = 955C53F91BF516A100F6E4CE /* petsitter.xcdatamodel */;
 			path = petsitter.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
