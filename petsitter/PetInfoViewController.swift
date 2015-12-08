@@ -11,10 +11,10 @@ import CoreData
 import Parse
 import Bolts
 
-class PetInfoViewController: UIViewController {
+class PetInfoViewController: UIViewController, UINavigationControllerDelegate {
 
   
-    @IBOutlet weak var petName: UILabel!
+    @IBOutlet weak var navBar: UINavigationItem!
    
     @IBOutlet weak var petImage: UIImageView!
     
@@ -61,10 +61,10 @@ class PetInfoViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         spinner.startAnimating()
-        petName.text = name_of_pet
         gatherImage(key_of_pet)
         fillInformation()
         spinner.stopAnimating()
+        navBar.title = name_of_pet
     }
     
     func fillInformation(){

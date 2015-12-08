@@ -30,6 +30,8 @@
 		67926C451C0D43A00031B13D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C441C0D43A00031B13D /* Bolts.framework */; };
 		67926C471C0D43A70031B13D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C461C0D43A70031B13D /* Parse.framework */; };
 		67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67926C481C0D45780031B13D /* PetTableViewCell.swift */; };
+		950858471C175F0300029E49 /* EditPetInforController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950858461C175F0300029E49 /* EditPetInforController.swift */; };
+		950858491C17683600029E49 /* EditPetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950858481C17683600029E49 /* EditPetInfoViewController.swift */; };
 		9555D1441C173BA5008FA280 /* welcomehands.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D13F1C173BA5008FA280 /* welcomehands.png */; };
 		9555D1451C173BA5008FA280 /* welcomemountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D1401C173BA5008FA280 /* welcomemountain.png */; };
 		9555D1461C173BA5008FA280 /* welcomepaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D1411C173BA5008FA280 /* welcomepaw.png */; };
@@ -77,6 +79,8 @@
 		67926C441C0D43A00031B13D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		67926C461C0D43A70031B13D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		67926C481C0D45780031B13D /* PetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		950858461C175F0300029E49 /* EditPetInforController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPetInforController.swift; sourceTree = "<group>"; };
+		950858481C17683600029E49 /* EditPetInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPetInfoViewController.swift; sourceTree = "<group>"; };
 		9555D13F1C173BA5008FA280 /* welcomehands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomehands.png; sourceTree = "<group>"; };
 		9555D1401C173BA5008FA280 /* welcomemountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomemountain.png; sourceTree = "<group>"; };
 		9555D1411C173BA5008FA280 /* welcomepaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomepaw.png; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 				676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */,
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
 				9555D1491C173EB7008FA280 /* PetsImCaringForController.swift */,
+				950858461C175F0300029E49 /* EditPetInforController.swift */,
+				950858481C17683600029E49 /* EditPetInfoViewController.swift */,
 			);
 			path = petsitter;
 			sourceTree = "<group>";
@@ -327,8 +333,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				676F14D21C0E2BBA00BE1302 /* PetProfileViewController.swift in Sources */,
+				950858471C175F0300029E49 /* EditPetInforController.swift in Sources */,
 				675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */,
 				955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */,
+				950858491C17683600029E49 /* EditPetInfoViewController.swift in Sources */,
 				9555D14A1C173EB7008FA280 /* PetsImCaringForController.swift in Sources */,
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
