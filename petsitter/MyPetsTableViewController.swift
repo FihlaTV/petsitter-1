@@ -16,6 +16,7 @@ class MyPetsTableViewController: UITableViewController {
     
     var corePets = [NSManagedObject]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,22 +91,23 @@ class MyPetsTableViewController: UITableViewController {
         let corePet = corePets[indexPath.row]
         let petKey = corePet.valueForKey("pet_key") as! String
         let petName = corePet.valueForKey("pet_name") as! String
+        print(petKey)
         
-        
-        let query = PFQuery(className: "Pet")
-        query.whereKey("objectId", equalTo: petKey)
+        let query = PFQuery(className: "Pet_photos")
+        query.whereKey("pet_key", equalTo: petKey)
         query.getFirstObjectInBackgroundWithBlock {
             (object: PFObject?, error: NSError?) -> Void in
             if error != nil || object == nil {
                 print("The getFirstObject request failed inside of the myPetsTVC, in cell function.")
             } else {
                 //Retrieves the picture as a PFFile "parse framework file"
-                pet_pic.append(object?["pet_profile_pic"] as! PFFile)
-                print(pet_pic)
+                pet_pic.append(object?["profile_pic"] as! PFFile)
+
                 //extra step required to transform the pffile object into a uiimage
                 pet_pic[0].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
                     if error == nil {
                         let image = UIImage(data: imageData!)
+                    
                         cell.petImage.image = image
                     }
                 }
@@ -123,13 +125,13 @@ class MyPetsTableViewController: UITableViewController {
     // ============================================================
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            
             // this section will delete the pet from the data base
             //==========================================================
             let corePet = corePets[indexPath.row]
             let key_for_Delete = corePet.valueForKey("pet_key") as! String
             let query = PFQuery(className: "Pet")
             query.whereKey("objectId", equalTo: key_for_Delete)
+            //Look on parse for inner join query, then we should be able to delete the related table.
             query.getFirstObjectInBackgroundWithBlock {
                 (object: PFObject?, error: NSError?) -> Void in
                 if error != nil || object == nil {
@@ -139,20 +141,61 @@ class MyPetsTableViewController: UITableViewController {
                     print("Delete started")
                     object?.deleteInBackground()
                     
+                    let query = PFQuery(className: "Pet_photos")
+                    query.whereKey("pet_key", equalTo: key_for_Delete)
+                    query.getFirstObjectInBackgroundWithBlock {
+                        (pet_photo: PFObject?, error: NSError?) -> Void in
+                        if error != nil || object == nil {
+                            print("The getFirstObject request failed in my pets table view controller.")
+                        } else {
+                            pet_photo?.deleteEventually()
+                        }
+                    }
+
                     // Delete the row from the core data source
                     // =============================================================
                     self.deletePetAtIndex(indexPath.row)
                     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
                     //============================================================
                 }
-                
+            
+            
             }
+            
             // ============================================================
-            
-            
-            
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        } 
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("petInfoSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "petInfoSegue"
+        {
+            if let destination = segue.destinationViewController as? PetInfoViewController {
+                if let petIndex = tableView.indexPathForSelectedRow?.row {
+                    let corePet = corePets[petIndex]
+                    
+                    let name = corePet.valueForKeyPath("pet_name") as! String
+                    let key = corePet.valueForKey("pet_key") as! String
+                    let bio = corePet.valueForKey("pet_bio") as! String
+                    let feed = corePet.valueForKey("pet_feeding") as! String
+                    let act = corePet.valueForKey("pet_activity") as! String
+                    let contact = corePet.valueForKey("pet_contact") as! String
+                    let number = corePet.valueForKey("pet_number") as! String
+                    
+                    destination.name_of_pet = name
+                    destination.key_of_pet = key
+                    destination.pet_bio_passed = bio
+                    destination.feed_passed = feed
+                    destination.act_passed = act
+                    destination.contact_name = contact
+                    destination.contact_number = number
+                    
+                }
+            }
         }
     }
+
 }
