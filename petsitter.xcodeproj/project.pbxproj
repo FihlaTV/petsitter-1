@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C172C71C0FF4AC00412CA7 /* welcomerect.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172C61C0FF4AC00412CA7 /* welcomerect.png */; };
+		01C172CD1C10CB4B00412CA7 /* welcomehands.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172CC1C10CB4B00412CA7 /* welcomehands.png */; };
+		01C172CF1C10CB4F00412CA7 /* welcomepaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172CE1C10CB4F00412CA7 /* welcomepaw.png */; };
+		01C172D11C10CB5400412CA7 /* welcomemountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C172D01C10CB5400412CA7 /* welcomemountain.png */; };
+		01CBEBA91C10D373000F1867 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBEBA81C10D373000F1867 /* WelcomeViewController.swift */; };
 		67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C301C0D42520031B13D /* AudioToolbox.framework */; };
 		67926C331C0D43440031B13D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C321C0D43440031B13D /* CFNetwork.framework */; };
 		67926C351C0D434F0031B13D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C341C0D434F0031B13D /* CoreGraphics.framework */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C172C61C0FF4AC00412CA7 /* welcomerect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomerect.png; sourceTree = "<group>"; };
+		01C172CC1C10CB4B00412CA7 /* welcomehands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomehands.png; sourceTree = "<group>"; };
+		01C172CE1C10CB4F00412CA7 /* welcomepaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomepaw.png; sourceTree = "<group>"; };
+		01C172D01C10CB5400412CA7 /* welcomemountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomemountain.png; sourceTree = "<group>"; };
+		01CBEBA81C10D373000F1867 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../WelcomeViewController.swift; sourceTree = "<group>"; };
 		67926C301C0D42520031B13D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		67926C321C0D43440031B13D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		67926C341C0D434F0031B13D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +108,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01C172BF1C0FDCE300412CA7 /* welcome photos */ = {
+			isa = PBXGroup;
+			children = (
+				01C172C61C0FF4AC00412CA7 /* welcomerect.png */,
+				01C172CE1C10CB4F00412CA7 /* welcomepaw.png */,
+				01C172D01C10CB5400412CA7 /* welcomemountain.png */,
+				01C172CC1C10CB4B00412CA7 /* welcomehands.png */,
+			);
+			path = "welcome photos";
+			sourceTree = "<group>";
+		};
 		67068FA31C0AD664005C88C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,10 +162,12 @@
 			children = (
 				955C53F11BF516A000F6E4CE /* AppDelegate.swift */,
 				955C53F51BF516A100F6E4CE /* Main.storyboard */,
+				01C172BF1C0FDCE300412CA7 /* welcome photos */,
 				955C53FB1BF516A100F6E4CE /* Assets.xcassets */,
 				955C53FD1BF516A100F6E4CE /* LaunchScreen.storyboard */,
 				955C54001BF516A100F6E4CE /* Info.plist */,
 				955C53F81BF516A100F6E4CE /* petsitter.xcdatamodeld */,
+				01CBEBA81C10D373000F1867 /* WelcomeViewController.swift */,
 				95C52EEB1BFE576700C136E0 /* AddPetViewController.swift */,
 				95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */,
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
@@ -244,8 +267,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C172D11C10CB5400412CA7 /* welcomemountain.png in Resources */,
 				955C53FF1BF516A100F6E4CE /* LaunchScreen.storyboard in Resources */,
 				955C53FC1BF516A100F6E4CE /* Assets.xcassets in Resources */,
+				01C172CD1C10CB4B00412CA7 /* welcomehands.png in Resources */,
+				01C172CF1C10CB4F00412CA7 /* welcomepaw.png in Resources */,
+				01C172C71C0FF4AC00412CA7 /* welcomerect.png in Resources */,
 				955C53F71BF516A100F6E4CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +294,7 @@
 				955C53FA1BF516A100F6E4CE /* petsitter.xcdatamodeld in Sources */,
 				95C52EEC1BFE576700C136E0 /* AddPetViewController.swift in Sources */,
 				955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */,
+				01CBEBA91C10D373000F1867 /* WelcomeViewController.swift in Sources */,
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
 			);
