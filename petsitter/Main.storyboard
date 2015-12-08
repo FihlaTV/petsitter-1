@@ -525,7 +525,6 @@
         <!--Help-->
         <scene sceneID="k0g-av-CKU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hZl-Ew-5LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Help" id="S5M-g5-ulW" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aw2-al-ROq"/>
@@ -659,6 +658,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Help" selectedImage="mypetspawprint_720.jpg" id="8n9-hu-IOT"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZl-Ew-5LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1328" y="1227"/>
         </scene>
