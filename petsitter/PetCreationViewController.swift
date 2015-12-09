@@ -57,8 +57,11 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         petContactNumberTxt.delegate = self
         
         petNameTxtField.delegate = self
+        petPersonalityTxt.tag = 4
         petPersonalityTxt.delegate = self
+        petActivityTxt.tag = 5
         petActivityTxt.delegate = self
+        petFeedingTxt.tag = 5
         petFeedingTxt.delegate = self
         
         //[2] - end
@@ -111,8 +114,15 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
             let replacementStringIsLegal = string.rangeOfCharacterFromSet(disallowedCharacterSet) == nil
             return replacementStringIsLegal && newString.length <= maxLength
         }
+        if textField.tag == 4{
+            let maxLength = 40
+            let currentString: NSString = textField.text!
+            let newString: NSString =
+            currentString.stringByReplacingCharactersInRange(range, withString: string)
+            return newString.length <= maxLength
+        }
         else{
-            let maxLength = 60
+            let maxLength = 90
             let currentString: NSString = textField.text!
             let newString: NSString =
             currentString.stringByReplacingCharactersInRange(range, withString: string)
