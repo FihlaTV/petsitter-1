@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ydc-Fb-eCe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ydc-Fb-eCe">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -13,23 +13,20 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="297" sectionHeaderHeight="28" sectionFooterHeight="28" id="OeZ-k4-dOi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" rowHeight="297" id="OtT-KB-7Pt" customClass="PetTableViewCell" customModule="petsitter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="297"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OtT-KB-7Pt" id="uIA-w0-Cjk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="296.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="296"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-Sj-RgO">
                                             <rect key="frame" x="8" y="30" width="579" height="258"/>
-                                            <animations/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-K3-218">
                                             <rect key="frame" x="222" y="-2" width="150" height="24"/>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="veu-4a-Awa"/>
                                             </constraints>
@@ -38,7 +35,6 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="Hae-K3-218" firstAttribute="top" secondItem="uIA-w0-Cjk" secondAttribute="topMargin" constant="-10" id="SlA-pk-iKf"/>
                                         <constraint firstItem="C2F-Sj-RgO" firstAttribute="top" secondItem="Hae-K3-218" secondAttribute="bottom" constant="8" id="Yef-eP-jcc"/>
@@ -48,7 +44,6 @@
                                         <constraint firstItem="C2F-Sj-RgO" firstAttribute="leading" secondItem="uIA-w0-Cjk" secondAttribute="leadingMargin" id="xDg-CO-AUG"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <outlet property="nameLabel" destination="Hae-K3-218" id="aPo-cd-06w"/>
                                     <outlet property="petImage" destination="C2F-Sj-RgO" id="StY-ba-F34"/>
@@ -89,14 +84,12 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="xGd-fd-B8a">
                                 <rect key="frame" x="30" y="72" width="355" height="140"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="355" id="vPE-Fn-Joh"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add personality info" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G6g-Ex-FpL">
                                 <rect key="frame" x="57" y="277" width="300" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="WsG-8s-fWr"/>
                                 </constraints>
@@ -106,7 +99,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add feeding instructions" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3ga-6e-ROW">
                                 <rect key="frame" x="57" y="334" width="300" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="crq-vm-Kdn"/>
                                 </constraints>
@@ -116,7 +108,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add emergency contact's name:" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gop-RJ-5Um">
                                 <rect key="frame" x="57" y="449" width="300" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="obn-9N-Rst"/>
                                 </constraints>
@@ -126,7 +117,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add emergency contact's phone#" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xgj-gM-5oj">
                                 <rect key="frame" x="57" y="506" width="300" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="0aG-mm-2jH"/>
                                 </constraints>
@@ -136,7 +126,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add activity instructions" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rM9-aK-qZX">
                                 <rect key="frame" x="57" y="394" width="300" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ZOS-kN-qFy"/>
                                 </constraints>
@@ -146,7 +135,6 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbX-DS-697">
                                 <rect key="frame" x="145" y="577" width="125" height="35"/>
-                                <animations/>
                                 <state key="normal" title="Choose Pet Image"/>
                                 <connections>
                                     <action selector="selectingImage:" destination="ue5-Ke-UxC" eventType="touchUpInside" id="Ol9-4J-2wc"/>
@@ -154,20 +142,17 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Pet's Name:" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IIO-Mx-J9A">
                                 <rect key="frame" x="132" y="230" width="151" height="25"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kT9-O8-wPW">
                                 <rect key="frame" x="189" y="626" width="40" height="37"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="SPv-51-EI8"/>
                                 </constraints>
                                 <color key="color" red="0.064147484640000002" green="0.080557204529999996" blue="0.65911063759999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G6g-Ex-FpL" firstAttribute="top" secondItem="IIO-Mx-J9A" secondAttribute="bottom" constant="22" id="2Vr-A8-JHi"/>
@@ -237,11 +222,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="2oT-sb-ir4">
                                 <rect key="frame" x="30" y="107" width="355" height="113"/>
-                                <animations/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="28" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-5Y-XbX">
                                 <rect key="frame" x="57" y="287" width="300" height="29"/>
-                                <animations/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <segments>
                                     <segment title="Info"/>
@@ -250,14 +233,12 @@
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet_name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2K-mm-Hb6">
                                 <rect key="frame" x="107" y="72" width="200" height="24"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9uv-De-bY8">
                                 <rect key="frame" x="189" y="145" width="37" height="37"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="VS1-ta-fRI"/>
                                 </constraints>
@@ -265,7 +246,6 @@
                             </activityIndicatorView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="pet_bio" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-jf-pO4">
                                 <rect key="frame" x="57" y="237" width="300" height="42"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="zNQ-UK-tzk"/>
@@ -274,8 +254,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(xxx)xxx-xxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miJ-SQ-wc7">
-                                <rect key="frame" x="221" y="0.0" width="110" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="221" y="0.0" width="110" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="Cqe-la-87B"/>
                                 </constraints>
@@ -285,7 +264,6 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isG-JI-k4N">
                                 <rect key="frame" x="7" y="323" width="400" height="361"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="361" id="4WC-5D-2uf"/>
                                     <constraint firstAttribute="width" constant="400" id="ZRl-E9-CRb"/>
@@ -296,14 +274,12 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3V-uv-rw2">
                                 <rect key="frame" x="7" y="323" width="400" height="361"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="QMU-cC-etf"/>
                                     <constraint firstAttribute="height" constant="361" id="UDB-OX-Tnf"/>
                                 </constraints>
                             </containerView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="isG-JI-k4N" firstAttribute="centerX" secondItem="Zou-3x-jyc" secondAttribute="centerX" id="2ta-vH-kgO"/>
@@ -375,7 +351,6 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add personality info" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T8p-g1-nnR">
                                         <rect key="frame" x="57" y="277" width="300" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="xwm-fM-ECz"/>
                                         </constraints>
@@ -385,7 +360,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add feeding instructions" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yJ1-dj-vmI">
                                         <rect key="frame" x="57" y="334" width="300" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="qgk-5T-mUe"/>
                                         </constraints>
@@ -395,7 +369,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add emergency contact's name:" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d13-dh-y64">
                                         <rect key="frame" x="57" y="449" width="300" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="HsE-uW-nxK"/>
                                         </constraints>
@@ -405,7 +378,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add emergency contact's phone#" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yqY-Ei-yIR">
                                         <rect key="frame" x="57" y="506" width="300" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="PiN-eW-hwA"/>
                                         </constraints>
@@ -415,7 +387,6 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add activity instructions" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wgS-jy-xDA">
                                         <rect key="frame" x="57" y="394" width="300" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="x08-bL-0wv"/>
                                         </constraints>
@@ -425,12 +396,10 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Pet's Name:" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-s9-LZS">
                                         <rect key="frame" x="132" y="230" width="151" height="25"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="d13-dh-y64" firstAttribute="centerX" secondItem="kHF-e0-tZZ" secondAttribute="centerX" id="3Uf-zy-Atx"/>
@@ -447,7 +416,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="l83-b3-Xvw">
@@ -456,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXx-Pj-vVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552" y="313"/>
+            <point key="canvasLocation" x="1512" y="-55"/>
         </scene>
         <!--Pets I'm Caring For-->
         <scene sceneID="DH8-m8-Dl1">
@@ -465,18 +433,40 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="w5w-Fw-sI6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rtL-dM-bqY">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="caringPetCell" textLabel="X9b-6y-VFb" detailTextLabel="4wf-bi-MwQ" imageView="aYM-vd-QJz" rowHeight="300" style="IBUITableViewCellStyleSubtitle" id="rtL-dM-bqY" customClass="CaringForTableViewCell" customModule="petsitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rtL-dM-bqY" id="TFg-Wr-09y">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X9b-6y-VFb">
+                                            <rect key="frame" x="329" y="123" width="66" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4wf-bi-MwQ">
+                                            <rect key="frame" x="329" y="153" width="28" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="welcomehands.png" id="aYM-vd-QJz">
+                                            <rect key="frame" x="15" y="0.0" width="299" height="299"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
-                                <animations/>
+                                <connections>
+                                    <outlet property="petBioLabel" destination="4wf-bi-MwQ" id="LLY-4v-UX1"/>
+                                    <outlet property="petImageView" destination="aYM-vd-QJz" id="HIZ-FJ-yHX"/>
+                                    <outlet property="petNameLabel" destination="X9b-6y-VFb" id="zd9-uS-MjP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -494,7 +484,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imh-Ef-AHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="870"/>
+            <point key="canvasLocation" x="286" y="1198"/>
         </scene>
         <!--Pets I'm Caring For-->
         <scene sceneID="evy-Yp-PIO">
@@ -504,7 +494,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LnD-jB-2e3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="GEv-On-0GY" kind="relationship" relationship="rootViewController" id="UYQ-52-Dxj"/>
@@ -524,7 +513,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3es-mE-3j2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="PVf-iY-jTe" kind="relationship" relationship="rootViewController" id="OTP-dY-3wA"/>
@@ -541,7 +529,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rOp-Nx-ClZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -567,15 +554,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome to Pet Watch!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uns-3k-ZSe">
-                                <rect key="frame" x="156" y="60" width="288.5" height="33.5"/>
-                                <animations/>
+                                <rect key="frame" x="156" y="60" width="289" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="welcomerect.png" translatesAutoresizingMaskIntoConstraints="NO" id="yVb-XH-yzf">
                                 <rect key="frame" x="70" y="133" width="12" height="328"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="328" id="4Ix-bl-oHN"/>
                                     <constraint firstAttribute="width" constant="12" id="mXM-CF-kKR"/>
@@ -583,7 +568,6 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="welcomepaw.png" translatesAutoresizingMaskIntoConstraints="NO" id="kox-po-TxF">
                                 <rect key="frame" x="31" y="128" width="91" height="91"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="IIj-ps-jVi"/>
                                     <constraint firstAttribute="width" constant="91" id="Jf2-Nq-z7B"/>
@@ -591,43 +575,37 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="welcomehands.png" translatesAutoresizingMaskIntoConstraints="NO" id="rLH-Wn-q2Y">
                                 <rect key="frame" x="31" y="249" width="91" height="91"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="0Kk-bB-qza"/>
                                     <constraint firstAttribute="width" constant="91" id="xK9-VU-6OS"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="STEP 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpU-ZI-xdk">
-                                <rect key="frame" x="144" y="133" width="47.5" height="18"/>
-                                <animations/>
+                                <rect key="frame" x="144" y="133" width="48" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add Your Pets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDD-JB-9Gk">
-                                <rect key="frame" x="142" y="159" width="115" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="142" y="159" width="115" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="STEP 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wz0-o0-3jD">
-                                <rect key="frame" x="144" y="249" width="49.5" height="18"/>
-                                <animations/>
+                                <rect key="frame" x="144" y="249" width="50" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Invite Your Sitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPQ-po-KzF">
-                                <rect key="frame" x="142" y="275" width="137" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="142" y="275" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="welcomemountain.png" translatesAutoresizingMaskIntoConstraints="NO" id="tQv-Uq-eMu">
                                 <rect key="frame" x="31" y="370" width="91" height="91"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="dcb-GZ-Wg9"/>
                                     <constraint firstAttribute="height" constant="91" id="rup-gA-0yC"/>
@@ -635,21 +613,18 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="STEP 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owl-XU-SfH">
                                 <rect key="frame" x="144" y="365" width="50" height="18"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enjoy Your Trip!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRk-fE-Jay">
-                                <rect key="frame" x="142" y="391" width="128" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="142" y="391" width="128" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="And know your pet is well taken care of by checking for updates in their log." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-XD-P9V">
                                 <rect key="frame" x="138" y="414" width="212" height="67"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="212" id="NsT-ll-S0x"/>
@@ -660,7 +635,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iPQ-po-KzF" firstAttribute="top" secondItem="wz0-o0-3jD" secondAttribute="bottom" constant="8" id="04X-uh-dEM"/>
@@ -706,57 +680,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="361"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="oJi-Yf-PmP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="oJi-Yf-PmP">
                                 <rect key="frame" x="154" y="239" width="100" height="87"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="NpR-f6-JEk"/>
                                     <constraint firstAttribute="height" constant="87" id="PgX-Q2-NeH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="3C7-nX-Cgz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="3C7-nX-Cgz">
                                 <rect key="frame" x="278" y="239" width="100" height="87"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ORH-Ea-caG"/>
                                     <constraint firstAttribute="height" constant="87" id="oqQ-qt-1EQ"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="2By-vq-YFL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="2By-vq-YFL">
                                 <rect key="frame" x="278" y="143" width="100" height="87"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="9pZ-CY-Nr3"/>
                                     <constraint firstAttribute="width" constant="100" id="FXK-GW-kqb"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="VbC-WU-40k">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="VbC-WU-40k">
                                 <rect key="frame" x="154" y="143" width="100" height="87"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="v8u-Wx-vDZ"/>
                                     <constraint firstAttribute="height" constant="87" id="zUQ-3a-sfG"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="EGt-g4-QE3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="EGt-g4-QE3">
                                 <rect key="frame" x="24" y="143" width="100" height="87"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="dh7-z1-EjF"/>
                                     <constraint firstAttribute="height" constant="87" id="u3U-ww-UFU"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="IZi-Ot-oIM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paw-print-outline_318-35039.png" translatesAutoresizingMaskIntoConstraints="NO" id="IZi-Ot-oIM">
                                 <rect key="frame" x="24" y="238" width="100" height="87"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="bRs-nc-PZa"/>
                                     <constraint firstAttribute="width" constant="100" id="kPr-pr-lAG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sarah Jessica Parker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azz-XG-7vd">
-                                <rect key="frame" x="24" y="91" width="170" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="24" y="91" width="170" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="ZgP-PH-j54"/>
                                 </constraints>
@@ -766,7 +733,6 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="pet_activity" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hhd-3r-KDP">
                                 <rect key="frame" x="50" y="49" width="300" height="42"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="sNS-De-RFo"/>
@@ -776,7 +742,6 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="pet_feeding" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-po-LXp">
                                 <rect key="frame" x="50" y="10" width="300" height="42"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="SA0-pS-3kz"/>
@@ -785,7 +750,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3C7-nX-Cgz" firstAttribute="top" secondItem="2By-vq-YFL" secondAttribute="bottom" constant="9" id="419-GP-9EX"/>
@@ -813,7 +777,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9f-ZI-Plh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="1262"/>
+            <point key="canvasLocation" x="1505" y="641.5"/>
         </scene>
     </scenes>
     <resources>
