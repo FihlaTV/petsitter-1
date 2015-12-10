@@ -41,7 +41,7 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var petContactNumberTxt: UITextField!
     //[1] - end
     //===============================================================================
-    
+    //coment
     override func viewDidLoad() {
     //[2]
     //Setting up textfield tags, to uniquely identify them once passed into the self.delegate
@@ -353,5 +353,42 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         //print(self.pet_key,"key at point before photo upload.")
         
     }
+    
+    //this is function is when hit reutrn on keyboard,  the keyboard will return,  with just this func, the textfield will not go back to original spot
+    func petContactNameTxtShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    
+    
+    
+    
+    //with this function when click textfield, textfield will go up when keyboard pops (with out if statment)
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        //now we add other textfield, it will go off the screen when run app,  add this if statment and included scrollview line will fix it
+        if (textField == petContactNameTxt){
+            scrollView.setContentOffset(CGPointMake(0, 150), animated: true)
+        }
+            
+            //add else statment and scrollview.set line if there are more textfield.  this mean go up 150 space.
+        else{
+            scrollView.setContentOffset(CGPointMake(0, 150), animated: true)
+            
+        }
+        
+    }
+    
+    
+    //this is for when hit return on keyboard, keyboard will return, and textfield will go back to orginial spot
+    func textFieldDidEndEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
+    
+
+    
     
 }

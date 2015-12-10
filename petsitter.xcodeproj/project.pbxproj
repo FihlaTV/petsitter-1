@@ -17,6 +17,7 @@
 		675869E51C0FF18E006B59EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */; };
 		675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */; };
 		676F14D21C0E2BBA00BE1302 /* PetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */; };
+		6778DC601C192854008F6BD4 /* CaringForTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */; };
 		67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C301C0D42520031B13D /* AudioToolbox.framework */; };
 		67926C331C0D43440031B13D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C321C0D43440031B13D /* CFNetwork.framework */; };
 		67926C351C0D434F0031B13D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C341C0D434F0031B13D /* CoreGraphics.framework */; };
@@ -64,6 +65,7 @@
 		675869E71C0FF238006B59EF /* petsitter 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "petsitter 2.xcdatamodel"; sourceTree = "<group>"; };
 		675869E81C0FF238006B59EF /* petsitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = petsitter.xcdatamodel; sourceTree = "<group>"; };
 		676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetProfileViewController.swift; sourceTree = "<group>"; };
+		6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaringForTableViewCell.swift; sourceTree = "<group>"; };
 		67926C301C0D42520031B13D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		67926C321C0D43440031B13D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		67926C341C0D434F0031B13D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -201,6 +203,7 @@
 				676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */,
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
 				9555D1491C173EB7008FA280 /* PetsImCaringForController.swift */,
+				6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */,
 			);
 			path = petsitter;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
 				673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */,
+				6778DC601C192854008F6BD4 /* CaringForTableViewCell.swift in Sources */,
 				675860811C0FE35C006B59EF /* PetInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

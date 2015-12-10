@@ -68,11 +68,7 @@ class PetInfoViewController: UIViewController {
     }
     
     func fillInformation(){
-        petBio.text = pet_bio_passed
-        petFeed.text = feed_passed
-        petAct.text = act_passed
-        ContactName.text = contact_name
-        contactNumber.text = contact_number
+       
     }
 
     override func didReceiveMemoryWarning() {
