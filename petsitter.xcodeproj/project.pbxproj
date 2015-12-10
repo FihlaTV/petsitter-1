@@ -31,6 +31,8 @@
 		67926C451C0D43A00031B13D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C441C0D43A00031B13D /* Bolts.framework */; };
 		67926C471C0D43A70031B13D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C461C0D43A70031B13D /* Parse.framework */; };
 		67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67926C481C0D45780031B13D /* PetTableViewCell.swift */; };
+		950683971C1A082100C520F9 /* PetImWatchingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950683961C1A082100C520F9 /* PetImWatchingInfoViewController.swift */; };
+		950683991C1A0B1600C520F9 /* AddLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950683981C1A0B1600C520F9 /* AddLogViewController.swift */; };
 		9555D1441C173BA5008FA280 /* welcomehands.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D13F1C173BA5008FA280 /* welcomehands.png */; };
 		9555D1451C173BA5008FA280 /* welcomemountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D1401C173BA5008FA280 /* welcomemountain.png */; };
 		9555D1461C173BA5008FA280 /* welcomepaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D1411C173BA5008FA280 /* welcomepaw.png */; };
@@ -79,6 +81,8 @@
 		67926C441C0D43A00031B13D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		67926C461C0D43A70031B13D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		67926C481C0D45780031B13D /* PetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		950683961C1A082100C520F9 /* PetImWatchingInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetImWatchingInfoViewController.swift; sourceTree = "<group>"; };
+		950683981C1A0B1600C520F9 /* AddLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLogViewController.swift; sourceTree = "<group>"; };
 		9555D13F1C173BA5008FA280 /* welcomehands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomehands.png; sourceTree = "<group>"; };
 		9555D1401C173BA5008FA280 /* welcomemountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomemountain.png; sourceTree = "<group>"; };
 		9555D1411C173BA5008FA280 /* welcomepaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomepaw.png; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
 				9555D1491C173EB7008FA280 /* PetsImCaringForController.swift */,
 				6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */,
+				950683961C1A082100C520F9 /* PetImWatchingInfoViewController.swift */,
+				950683981C1A0B1600C520F9 /* AddLogViewController.swift */,
 			);
 			path = petsitter;
 			sourceTree = "<group>";
@@ -336,6 +342,8 @@
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
 				673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */,
+				950683971C1A082100C520F9 /* PetImWatchingInfoViewController.swift in Sources */,
+				950683991C1A0B1600C520F9 /* AddLogViewController.swift in Sources */,
 				6778DC601C192854008F6BD4 /* CaringForTableViewCell.swift in Sources */,
 				675860811C0FE35C006B59EF /* PetInfoViewController.swift in Sources */,
 			);
