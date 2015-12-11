@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ydc-Fb-eCe">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -9,23 +11,20 @@
         <scene sceneID="bLU-Db-z0e">
             <objects>
                 <tableViewController title="My Pets" id="PVf-iY-jTe" customClass="MyPetsTableViewController" customModule="petsitter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="297" sectionHeaderHeight="28" sectionFooterHeight="28" id="OeZ-k4-dOi">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" sectionHeaderHeight="28" sectionFooterHeight="28" id="OeZ-k4-dOi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" rowHeight="297" id="OtT-KB-7Pt" customClass="PetTableViewCell" customModule="petsitter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="297"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="petCell" rowHeight="154" id="OtT-KB-7Pt" customClass="PetTableViewCell" customModule="petsitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="154"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OtT-KB-7Pt" id="uIA-w0-Cjk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="296"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="OtT-KB-7Pt" id="uIA-w0-Cjk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="153"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-Sj-RgO">
-                                            <rect key="frame" x="8" y="30" width="579" height="258"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-K3-218">
-                                            <rect key="frame" x="222" y="-2" width="150" height="24"/>
+                                            <rect key="frame" x="255" y="51" width="150" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="veu-4a-Awa"/>
                                             </constraints>
@@ -33,14 +32,21 @@
                                             <color key="textColor" red="0.064147484637487109" green="0.080557204533146978" blue="0.65911063762626265" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-Sj-RgO">
+                                            <rect key="frame" x="36" y="0.0" width="169" height="138"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="C2F-Sj-RgO" secondAttribute="height" multiplier="87:71" id="ChQ-C3-pMp"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Hae-K3-218" firstAttribute="top" secondItem="uIA-w0-Cjk" secondAttribute="topMargin" constant="-10" id="SlA-pk-iKf"/>
-                                        <constraint firstItem="C2F-Sj-RgO" firstAttribute="top" secondItem="Hae-K3-218" secondAttribute="bottom" constant="8" id="Yef-eP-jcc"/>
-                                        <constraint firstItem="Hae-K3-218" firstAttribute="centerX" secondItem="uIA-w0-Cjk" secondAttribute="centerX" constant="-3" id="gS0-PW-Wou"/>
-                                        <constraint firstItem="C2F-Sj-RgO" firstAttribute="bottom" secondItem="uIA-w0-Cjk" secondAttribute="bottomMargin" id="m5I-cl-3Yw"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="C2F-Sj-RgO" secondAttribute="trailing" constant="5" id="uRj-eS-fPr"/>
-                                        <constraint firstItem="C2F-Sj-RgO" firstAttribute="leading" secondItem="uIA-w0-Cjk" secondAttribute="leadingMargin" id="xDg-CO-AUG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="C2F-Sj-RgO" secondAttribute="trailing" constant="410" id="25u-t0-nKg"/>
+                                        <constraint firstItem="C2F-Sj-RgO" firstAttribute="top" secondItem="uIA-w0-Cjk" secondAttribute="top" id="Mou-q1-XPL"/>
+                                        <constraint firstItem="C2F-Sj-RgO" firstAttribute="leading" secondItem="uIA-w0-Cjk" secondAttribute="leadingMargin" constant="28" id="T7x-9W-GrU"/>
+                                        <constraint firstItem="Hae-K3-218" firstAttribute="leading" secondItem="C2F-Sj-RgO" secondAttribute="trailing" constant="50" id="VVs-dh-I2I"/>
+                                        <constraint firstItem="C2F-Sj-RgO" firstAttribute="bottom" secondItem="uIA-w0-Cjk" secondAttribute="bottomMargin" id="ciY-yV-F2m"/>
+                                        <constraint firstItem="Hae-K3-218" firstAttribute="top" secondItem="uIA-w0-Cjk" secondAttribute="topMargin" constant="43" id="d36-iJ-dAd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Hae-K3-218" secondAttribute="bottom" constant="63" id="t4L-pZ-Mr5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
