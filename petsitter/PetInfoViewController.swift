@@ -13,6 +13,8 @@ import Bolts
 
 class PetInfoViewController: UIViewController {
 
+    @IBOutlet weak var viewPetInfoContainer: UIView!
+    @IBOutlet weak var viewLogContainer: UIView!
   
     @IBOutlet weak var petName: UILabel!
    
@@ -65,6 +67,8 @@ class PetInfoViewController: UIViewController {
         gatherImage(key_of_pet)
         fillInformation()
         spinner.stopAnimating()
+        viewLogContainer.hidden = true
+        viewPetInfoContainer.hidden = false
     }
     
     func fillInformation(){
@@ -76,6 +80,19 @@ class PetInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func segmentSwitch(sender: AnyObject) {
+        switch segSwitch.selectedSegmentIndex {
+        case 0:
+            viewLogContainer.hidden = true
+            viewPetInfoContainer.hidden = false
+        case 1:
+            viewLogContainer.hidden = false
+            viewPetInfoContainer.hidden = true
+        default:
+            break;
+        }
+    
+    }
     
     
     func gatherImage(key: String){
