@@ -42,6 +42,9 @@
 		955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C53F11BF516A000F6E4CE /* AppDelegate.swift */; };
 		955C53FC1BF516A100F6E4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955C53FB1BF516A100F6E4CE /* Assets.xcassets */; };
 		955C540A1BF516A100F6E4CE /* petsitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C54091BF516A100F6E4CE /* petsitterTests.swift */; };
+		956C211A1C1C9BC10059D9DD /* SubViewPetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C21191C1C9BC10059D9DD /* SubViewPetInfoViewController.swift */; };
+		956C211C1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C211B1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift */; };
+		956C211E1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C211D1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift */; };
 		95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,9 @@
 		955C54051BF516A100F6E4CE /* petsitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petsitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		955C54091BF516A100F6E4CE /* petsitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petsitterTests.swift; sourceTree = "<group>"; };
 		955C540B1BF516A100F6E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		956C21191C1C9BC10059D9DD /* SubViewPetInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewPetInfoViewController.swift; sourceTree = "<group>"; };
+		956C211B1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubAddLogContainerViewController.swift; sourceTree = "<group>"; };
+		956C211D1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLogContainerTableViewController.swift; sourceTree = "<group>"; };
 		95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +216,9 @@
 				6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */,
 				950683961C1A082100C520F9 /* PetImWatchingInfoViewController.swift */,
 				950683981C1A0B1600C520F9 /* AddLogViewController.swift */,
+				956C21191C1C9BC10059D9DD /* SubViewPetInfoViewController.swift */,
+				956C211B1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift */,
+				956C211D1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift */,
 			);
 			path = petsitter;
 			sourceTree = "<group>";
@@ -341,11 +350,14 @@
 				9555D14A1C173EB7008FA280 /* PetsImCaringForController.swift in Sources */,
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
+				956C211A1C1C9BC10059D9DD /* SubViewPetInfoViewController.swift in Sources */,
 				673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */,
 				950683971C1A082100C520F9 /* PetImWatchingInfoViewController.swift in Sources */,
 				950683991C1A0B1600C520F9 /* AddLogViewController.swift in Sources */,
 				6778DC601C192854008F6BD4 /* CaringForTableViewCell.swift in Sources */,
 				675860811C0FE35C006B59EF /* PetInfoViewController.swift in Sources */,
+				956C211C1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift in Sources */,
+				956C211E1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
