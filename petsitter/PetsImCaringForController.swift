@@ -50,6 +50,10 @@ class PetsImCaringForController: UITableViewController {
                         self.bio = (object!.valueForKey("pet_bio"))! as! String
                         self.name = (object!.valueForKey("pet_name"))! as! String
                         
+                        //Set the status as true for pet_sit
+                        object!.setValue(true, forKey: "pet_sit_status")
+                        object!.saveInBackground()
+                        
                         print(self.pet_key," : Key retrieved from db")
                         print(self.activityInst," : activity retrieved from db")
                         print(self.emerName," : emername retrieved from db")

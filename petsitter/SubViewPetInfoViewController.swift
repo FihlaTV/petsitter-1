@@ -8,12 +8,38 @@
 
 import UIKit
 
+
 class SubViewPetInfoViewController: UIViewController {
 
+    @IBOutlet weak var petFeed: UITextView!
+    
+    @IBOutlet weak var petAct: UITextView!
+    
+    @IBOutlet weak var ContactName: UILabel!
+    
+    @IBOutlet weak var contactNumber: UIButton!
+    
+    @IBOutlet weak var code: UITextField!
+    
+    var feed_passed = String()
+    var act_passed = String()
+    var contact_name = String()
+    var contact_number = String()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fillInformation()
         // Do any additional setup after loading the view.
+    }
+    
+    func fillInformation(){
+        petFeed.text = feed_passed
+        petAct.text = act_passed
+        ContactName.text = contact_name
+        contactNumber.setTitle(contact_number, forState: .Normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +48,6 @@ class SubViewPetInfoViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
