@@ -167,14 +167,14 @@ class EditInfoViewController: UIViewController {
                     } catch let error as NSError {
                         print("Could not save into core data \(error), \(error.userInfo)")
                     }
+                    let alert = UIAlertController(title: "Success!", message: "Your changes have saved successfully.", preferredStyle: UIAlertControllerStyle.Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                        self.navigationController?.popToRootViewControllerAnimated(true)
+                    }
+                    alert.addAction(OKAction)
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
-                let vc: AnyObject? = self.storyboard?.instantiateViewControllerWithIdentifier("HomeController")
-                
-                self.presentViewController(vc as! UIViewController, animated: true, completion: nil)
             }
         }
-        
     }
-    
-
 }
