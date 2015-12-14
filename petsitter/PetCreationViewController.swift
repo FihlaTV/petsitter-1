@@ -167,8 +167,9 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         var petContact = String()
         var petNumber = String()
         
-        
+        var a = Bool(), b = Bool(), c = Bool(), d = Bool(), e = Bool(), f = Bool(), g = Bool()
         if self.petNameTxtField.text == nil || self.petNameTxtField.text == ""{
+            a = false
             let alertController = UIAlertController(title: "Error!", message: "One or more fields were left blank, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
@@ -176,10 +177,12 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         }
         else{
             petName = self.petNameTxtField.text!
+            a = true
         }
         
         
         if self.petPersonalityTxt.text == nil || self.petPersonalityTxt.text == ""{
+            b = false
             let alertController = UIAlertController(title: "Error!", message: "One or more fields were left blank, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
@@ -187,10 +190,12 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         }
         else{
             petBio = self.petPersonalityTxt.text!
+            b = true
         }
         
         
         if self.petFeedingTxt.text == nil || self.petFeedingTxt.text == ""{
+            c = false
             let alertController = UIAlertController(title: "Error!", message: "One or more fields were left blank, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
@@ -198,10 +203,12 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         }
         else{
             petFeed = self.petFeedingTxt.text!
+            c = true
         }
         
         
         if self.petActivityTxt.text == nil || self.petActivityTxt.text == ""{
+            d = false
             let alertController = UIAlertController(title: "Error!", message: "One or more fields were left blank, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
@@ -209,10 +216,12 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         }
         else{
             petAct = self.petActivityTxt.text!
+            d = true
         }
         
         
         if self.petContactNameTxt.text == nil || self.petContactNameTxt.text == ""{
+            e = false
             let alertController = UIAlertController(title: "Error!", message: "One or more fields were left blank, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
@@ -220,10 +229,12 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         }
         else{
             petContact = self.petContactNameTxt.text!
+            e = true
         }
         
         
         if self.petContactNumberTxt.text == nil || self.petContactNumberTxt.text == ""{
+            f = false
             let alertController = UIAlertController(title: "Error!", message: "One or more fields were left blank, please try again.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
@@ -231,9 +242,11 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         }
         else{
             petNumber = self.petContactNumberTxt.text!
+            f = true
         }
         
         if self.petImage.image == self.test!.image{
+            g = false
             let alertController = UIAlertController(title: "Error!", message: "Please select your pets profile image before moving forward.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
@@ -241,10 +254,12 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
             
         }
         else{
-            spinner.startAnimating()
-            self.createPetInDatabase(petName, bio: petBio, feed: petFeed, act: petAct, contact: petContact, number: petNumber)
+            g = true
         }
         
+        if a == true && b == true && c == true && d == true && e == true && f == true && g == true{
+            createPetInDatabase(petName, bio: petBio, feed: petFeed, act: petAct, contact: petContact, number: petNumber)
+        }
     }
     
     func createPetInDatabase(name: String, bio: String, feed: String, act: String, contact: String, number: String){
