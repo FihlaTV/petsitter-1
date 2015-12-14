@@ -12,11 +12,14 @@
 		673E52A41C0EBA56006F312A /* mypetspawprint_720.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */; };
 		673E52A61C0EBA62006F312A /* petsimcaringforhands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */; };
 		673E52A81C0EBE89006F312A /* test_icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A71C0EBE89006F312A /* test_icon.jpeg */; };
+		67409E931C1E306E00D97050 /* LogOwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67409E921C1E306E00D97050 /* LogOwnerTableViewCell.swift */; };
+		67409E951C1E465E00D97050 /* SubSitLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67409E941C1E465E00D97050 /* SubSitLogTableViewCell.swift */; };
+		674C69701C1E48EA001B3184 /* SubSitLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C696F1C1E48EA001B3184 /* SubSitLogTableViewController.swift */; };
+		674C69721C1E538D001B3184 /* SelectedLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C69711C1E538D001B3184 /* SelectedLogViewController.swift */; };
 		675860811C0FE35C006B59EF /* PetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675860801C0FE35C006B59EF /* PetInfoViewController.swift */; };
 		675869E31C0FF0DB006B59EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675869E21C0FF0DB006B59EF /* Main.storyboard */; };
 		675869E51C0FF18E006B59EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */; };
 		675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */; };
-		676F14D21C0E2BBA00BE1302 /* PetProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */; };
 		6778DC601C192854008F6BD4 /* CaringForTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */; };
 		67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C301C0D42520031B13D /* AudioToolbox.framework */; };
 		67926C331C0D43440031B13D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C321C0D43440031B13D /* CFNetwork.framework */; };
@@ -31,6 +34,10 @@
 		67926C451C0D43A00031B13D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C441C0D43A00031B13D /* Bolts.framework */; };
 		67926C471C0D43A70031B13D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C461C0D43A70031B13D /* Parse.framework */; };
 		67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67926C481C0D45780031B13D /* PetTableViewCell.swift */; };
+		67B324CF1C1E0D56002673F5 /* SubSitInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B324CE1C1E0D56002673F5 /* SubSitInfoViewController.swift */; };
+		67C4D7D81C1CF81C005F2C64 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C4D7D71C1CF81C005F2C64 /* EditInfoViewController.swift */; };
+		950683971C1A082100C520F9 /* PetImWatchingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950683961C1A082100C520F9 /* PetImWatchingInfoViewController.swift */; };
+		950683991C1A0B1600C520F9 /* AddLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950683981C1A0B1600C520F9 /* AddLogViewController.swift */; };
 		9555D1441C173BA5008FA280 /* welcomehands.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D13F1C173BA5008FA280 /* welcomehands.png */; };
 		9555D1451C173BA5008FA280 /* welcomemountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D1401C173BA5008FA280 /* welcomemountain.png */; };
 		9555D1461C173BA5008FA280 /* welcomepaw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9555D1411C173BA5008FA280 /* welcomepaw.png */; };
@@ -40,6 +47,9 @@
 		955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C53F11BF516A000F6E4CE /* AppDelegate.swift */; };
 		955C53FC1BF516A100F6E4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955C53FB1BF516A100F6E4CE /* Assets.xcassets */; };
 		955C540A1BF516A100F6E4CE /* petsitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955C54091BF516A100F6E4CE /* petsitterTests.swift */; };
+		956C211A1C1C9BC10059D9DD /* SubViewPetInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C21191C1C9BC10059D9DD /* SubViewPetInfoViewController.swift */; };
+		956C211C1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C211B1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift */; };
+		956C211E1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C211D1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift */; };
 		95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,12 +69,15 @@
 		673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mypetspawprint_720.jpg; sourceTree = "<group>"; };
 		673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petsimcaringforhands.jpg; sourceTree = "<group>"; };
 		673E52A71C0EBE89006F312A /* test_icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_icon.jpeg; sourceTree = "<group>"; };
+		67409E921C1E306E00D97050 /* LogOwnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOwnerTableViewCell.swift; sourceTree = "<group>"; };
+		67409E941C1E465E00D97050 /* SubSitLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSitLogTableViewCell.swift; sourceTree = "<group>"; };
+		674C696F1C1E48EA001B3184 /* SubSitLogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSitLogTableViewController.swift; sourceTree = "<group>"; };
+		674C69711C1E538D001B3184 /* SelectedLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedLogViewController.swift; sourceTree = "<group>"; };
 		675860801C0FE35C006B59EF /* PetInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetInfoViewController.swift; sourceTree = "<group>"; };
 		675869E21C0FF0DB006B59EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		675869E71C0FF238006B59EF /* petsitter 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "petsitter 2.xcdatamodel"; sourceTree = "<group>"; };
 		675869E81C0FF238006B59EF /* petsitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = petsitter.xcdatamodel; sourceTree = "<group>"; };
-		676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetProfileViewController.swift; sourceTree = "<group>"; };
 		6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaringForTableViewCell.swift; sourceTree = "<group>"; };
 		67926C301C0D42520031B13D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		67926C321C0D43440031B13D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -79,6 +92,10 @@
 		67926C441C0D43A00031B13D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		67926C461C0D43A70031B13D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		67926C481C0D45780031B13D /* PetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		67B324CE1C1E0D56002673F5 /* SubSitInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSitInfoViewController.swift; sourceTree = "<group>"; };
+		67C4D7D71C1CF81C005F2C64 /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		950683961C1A082100C520F9 /* PetImWatchingInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetImWatchingInfoViewController.swift; sourceTree = "<group>"; };
+		950683981C1A0B1600C520F9 /* AddLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLogViewController.swift; sourceTree = "<group>"; };
 		9555D13F1C173BA5008FA280 /* welcomehands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomehands.png; sourceTree = "<group>"; };
 		9555D1401C173BA5008FA280 /* welcomemountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomemountain.png; sourceTree = "<group>"; };
 		9555D1411C173BA5008FA280 /* welcomepaw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomepaw.png; sourceTree = "<group>"; };
@@ -92,6 +109,9 @@
 		955C54051BF516A100F6E4CE /* petsitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petsitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		955C54091BF516A100F6E4CE /* petsitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petsitterTests.swift; sourceTree = "<group>"; };
 		955C540B1BF516A100F6E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		956C21191C1C9BC10059D9DD /* SubViewPetInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewPetInfoViewController.swift; sourceTree = "<group>"; };
+		956C211B1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubAddLogContainerViewController.swift; sourceTree = "<group>"; };
+		956C211D1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewLogContainerTableViewController.swift; sourceTree = "<group>"; };
 		95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPetsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,17 +213,27 @@
 				955C53F11BF516A000F6E4CE /* AppDelegate.swift */,
 				9555D13E1C173BA5008FA280 /* welcome photos */,
 				955C53FB1BF516A100F6E4CE /* Assets.xcassets */,
+				675860801C0FE35C006B59EF /* PetInfoViewController.swift */,
+				95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */,
+				956C211B1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift */,
+				956C211D1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift */,
 				675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */,
 				675869E21C0FF0DB006B59EF /* Main.storyboard */,
 				955C54001BF516A100F6E4CE /* Info.plist */,
+				67B324CE1C1E0D56002673F5 /* SubSitInfoViewController.swift */,
+				67409E941C1E465E00D97050 /* SubSitLogTableViewCell.swift */,
 				675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */,
+				67C4D7D71C1CF81C005F2C64 /* EditInfoViewController.swift */,
+				956C21191C1C9BC10059D9DD /* SubViewPetInfoViewController.swift */,
+				674C69711C1E538D001B3184 /* SelectedLogViewController.swift */,
+				67409E921C1E306E00D97050 /* LogOwnerTableViewCell.swift */,
+				674C696F1C1E48EA001B3184 /* SubSitLogTableViewController.swift */,
 				673E529E1C0EB86A006F312A /* PetCreationViewController.swift */,
-				95C52EEF1BFE590B00C136E0 /* MyPetsTableViewController.swift */,
-				675860801C0FE35C006B59EF /* PetInfoViewController.swift */,
-				676F14D11C0E2BBA00BE1302 /* PetProfileViewController.swift */,
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
 				9555D1491C173EB7008FA280 /* PetsImCaringForController.swift */,
+				950683961C1A082100C520F9 /* PetImWatchingInfoViewController.swift */,
 				6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */,
+				950683981C1A0B1600C520F9 /* AddLogViewController.swift */,
 			);
 			path = petsitter;
 			sourceTree = "<group>";
@@ -329,15 +359,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676F14D21C0E2BBA00BE1302 /* PetProfileViewController.swift in Sources */,
 				675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */,
 				955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */,
+				674C69721C1E538D001B3184 /* SelectedLogViewController.swift in Sources */,
 				9555D14A1C173EB7008FA280 /* PetsImCaringForController.swift in Sources */,
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
+				956C211A1C1C9BC10059D9DD /* SubViewPetInfoViewController.swift in Sources */,
+				67B324CF1C1E0D56002673F5 /* SubSitInfoViewController.swift in Sources */,
+				67409E931C1E306E00D97050 /* LogOwnerTableViewCell.swift in Sources */,
 				673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */,
+				67409E951C1E465E00D97050 /* SubSitLogTableViewCell.swift in Sources */,
+				674C69701C1E48EA001B3184 /* SubSitLogTableViewController.swift in Sources */,
+				950683971C1A082100C520F9 /* PetImWatchingInfoViewController.swift in Sources */,
+				950683991C1A0B1600C520F9 /* AddLogViewController.swift in Sources */,
 				6778DC601C192854008F6BD4 /* CaringForTableViewCell.swift in Sources */,
 				675860811C0FE35C006B59EF /* PetInfoViewController.swift in Sources */,
+				956C211C1C1C9BE10059D9DD /* SubAddLogContainerViewController.swift in Sources */,
+				67C4D7D81C1CF81C005F2C64 /* EditInfoViewController.swift in Sources */,
+				956C211E1C1C9C5C0059D9DD /* ViewLogContainerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
