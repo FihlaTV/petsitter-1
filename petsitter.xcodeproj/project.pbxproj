@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EE59E151C1F752E00D5F7C4 /* Tab2-PetsImCaringFor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EE59E121C1F752E00D5F7C4 /* Tab2-PetsImCaringFor.png */; };
+		3EE59E161C1F752E00D5F7C4 /* Tab3-Help.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EE59E131C1F752E00D5F7C4 /* Tab3-Help.png */; };
+		3EE59E171C1F752E00D5F7C4 /* Tab1-MyPets.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EE59E141C1F752E00D5F7C4 /* Tab1-MyPets.png */; };
 		6723F4C01C1F4F90000FA034 /* ViewImageSitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6723F4BF1C1F4F90000FA034 /* ViewImageSitterViewController.swift */; };
 		673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673E529E1C0EB86A006F312A /* PetCreationViewController.swift */; };
 		673E52A21C0EB9A4006F312A /* paw-print-outline_318-35039.png in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */; };
-		673E52A41C0EBA56006F312A /* mypetspawprint_720.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */; };
-		673E52A61C0EBA62006F312A /* petsimcaringforhands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */; };
 		673E52A81C0EBE89006F312A /* test_icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A71C0EBE89006F312A /* test_icon.jpeg */; };
 		67409E931C1E306E00D97050 /* LogOwnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67409E921C1E306E00D97050 /* LogOwnerTableViewCell.swift */; };
 		67409E951C1E465E00D97050 /* SubSitLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67409E941C1E465E00D97050 /* SubSitLogTableViewCell.swift */; };
@@ -67,11 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EE59E121C1F752E00D5F7C4 /* Tab2-PetsImCaringFor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab2-PetsImCaringFor.png"; sourceTree = "<group>"; };
+		3EE59E131C1F752E00D5F7C4 /* Tab3-Help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab3-Help.png"; sourceTree = "<group>"; };
+		3EE59E141C1F752E00D5F7C4 /* Tab1-MyPets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab1-MyPets.png"; sourceTree = "<group>"; };
 		6723F4BF1C1F4F90000FA034 /* ViewImageSitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewImageSitterViewController.swift; sourceTree = "<group>"; };
 		673E529E1C0EB86A006F312A /* PetCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCreationViewController.swift; sourceTree = "<group>"; };
 		673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paw-print-outline_318-35039.png"; sourceTree = "<group>"; };
-		673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mypetspawprint_720.jpg; sourceTree = "<group>"; };
-		673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petsimcaringforhands.jpg; sourceTree = "<group>"; };
 		673E52A71C0EBE89006F312A /* test_icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_icon.jpeg; sourceTree = "<group>"; };
 		67409E921C1E306E00D97050 /* LogOwnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOwnerTableViewCell.swift; sourceTree = "<group>"; };
 		67409E941C1E465E00D97050 /* SubSitLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSitLogTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,9 +175,10 @@
 		673E52A01C0EB985006F312A /* Images/icons */ = {
 			isa = PBXGroup;
 			children = (
+				3EE59E121C1F752E00D5F7C4 /* Tab2-PetsImCaringFor.png */,
+				3EE59E131C1F752E00D5F7C4 /* Tab3-Help.png */,
+				3EE59E141C1F752E00D5F7C4 /* Tab1-MyPets.png */,
 				673E52A71C0EBE89006F312A /* test_icon.jpeg */,
-				673E52A51C0EBA62006F312A /* petsimcaringforhands.jpg */,
-				673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */,
 				673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */,
 			);
 			name = Images/icons;
@@ -343,13 +346,14 @@
 				9555D1461C173BA5008FA280 /* welcomepaw.png in Resources */,
 				673E52A21C0EB9A4006F312A /* paw-print-outline_318-35039.png in Resources */,
 				955C53FC1BF516A100F6E4CE /* Assets.xcassets in Resources */,
+				3EE59E161C1F752E00D5F7C4 /* Tab3-Help.png in Resources */,
 				9555D1451C173BA5008FA280 /* welcomemountain.png in Resources */,
 				9555D1471C173BA5008FA280 /* welcomerect.png in Resources */,
-				673E52A41C0EBA56006F312A /* mypetspawprint_720.jpg in Resources */,
 				675869E51C0FF18E006B59EF /* LaunchScreen.storyboard in Resources */,
 				9555D1481C173BA5008FA280 /* welcomerectangle.png in Resources */,
+				3EE59E151C1F752E00D5F7C4 /* Tab2-PetsImCaringFor.png in Resources */,
 				9555D1441C173BA5008FA280 /* welcomehands.png in Resources */,
-				673E52A61C0EBA62006F312A /* petsimcaringforhands.jpg in Resources */,
+				3EE59E171C1F752E00D5F7C4 /* Tab1-MyPets.png in Resources */,
 				673E52A81C0EBE89006F312A /* test_icon.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

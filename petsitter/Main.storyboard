@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ydc-Fb-eCe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ydc-Fb-eCe">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -506,7 +506,7 @@
         <scene sceneID="evy-Yp-PIO">
             <objects>
                 <navigationController id="T82-He-A74" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pets I'm Caring For" id="rct-tq-It1"/>
+                    <tabBarItem key="tabBarItem" title="Pets I'm Caring For" image="Tab2-PetsImCaringFor.png" id="rct-tq-It1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LnD-jB-2e3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -523,7 +523,7 @@
         <scene sceneID="2mZ-WL-COo">
             <objects>
                 <navigationController storyboardIdentifier="HomeController" id="u9a-h1-2K0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="myPets" image="Image-2" selectedImage="Image-2" id="DMC-zJ-wYO">
+                    <tabBarItem key="tabBarItem" title="myPets" image="Tab1-MyPets.png" id="DMC-zJ-wYO">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3es-mE-3j2">
@@ -678,7 +678,7 @@
                             <constraint firstItem="yVb-XH-yzf" firstAttribute="top" secondItem="Uns-3k-ZSe" secondAttribute="bottom" constant="40" id="qxW-IN-doI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Help" selectedImage="mypetspawprint_720.jpg" id="8n9-hu-IOT"/>
+                    <tabBarItem key="tabBarItem" title="Help" image="Tab3-Help.png" id="8n9-hu-IOT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZl-Ew-5LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1600,8 +1600,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-2" width="25" height="19"/>
-        <image name="mypetspawprint_720.jpg" width="695" height="720"/>
+        <image name="Tab1-MyPets.png" width="50" height="50"/>
+        <image name="Tab2-PetsImCaringFor.png" width="50" height="50"/>
+        <image name="Tab3-Help.png" width="50" height="50"/>
         <image name="paw-print-outline_318-35039.png" width="626" height="626"/>
         <image name="welcomehands.png" width="813" height="813"/>
         <image name="welcomemountain.png" width="813" height="813"/>
