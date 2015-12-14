@@ -1,8 +1,8 @@
 //
-//  SubViewPetInfoViewController.swift
+//  SubSitInfoViewController.swift
 //  petsitter
 //
-//  Created by Devin Clark on 12/12/15.
+//  Created by MU IT Program on 12/13/15.
 //  Copyright © 2015 Devin Clark. All rights reserved.
 //
 
@@ -10,49 +10,51 @@ import UIKit
 import Parse
 import Bolts
 
-class SubViewPetInfoViewController: UIViewController {
+class SubSitInfoViewController: UIViewController {
 
     @IBOutlet weak var petFeed: UITextView!
     
     @IBOutlet weak var petAct: UITextView!
     
-    @IBOutlet weak var ContactName: UILabel!
+    @IBOutlet weak var conName: UILabel!
     
-    @IBOutlet weak var contactNumber: UIButton!
+    @IBOutlet weak var conNum: UIButton!
     
-    @IBOutlet weak var code: UITextField!
+    @IBOutlet weak var pic1: UIImageView!
     
+    @IBOutlet weak var pic2: UIImageView!
+    
+    @IBOutlet weak var pic3: UIImageView!
+    
+    @IBOutlet weak var pic4: UIImageView!
+    
+    @IBOutlet weak var pic5: UIImageView!
+    
+    @IBOutlet weak var pic6: UIImageView!
+    
+    var key = String()
+    var choice = Int()
     var feed_passed = String()
     var act_passed = String()
     var contact_name = String()
     var contact_number = String()
-    var key = String()
-    var choice = Int()
-    
-    @IBOutlet weak var pic1: UIImageView!
-    @IBOutlet weak var pic2: UIImageView!
-    @IBOutlet weak var pic3: UIImageView!
-    @IBOutlet weak var pic4: UIImageView!
-    @IBOutlet weak var pic5: UIImageView!
-    @IBOutlet weak var pic6: UIImageView!
-    
-    var images = [PFFile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fillInformation()
-       
+        print(feed_passed, " fp")
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
         gather_available_images()
     }
+    
     func fillInformation(){
         petFeed.text = feed_passed
         petAct.text = act_passed
-        ContactName.text = contact_name
-        contactNumber.setTitle(contact_number, forState: .Normal)
+        conName.text = contact_name
+        conNum.setTitle(contact_number, forState: .Normal)
         
     }
     
@@ -78,7 +80,7 @@ class SubViewPetInfoViewController: UIViewController {
                             
                         }
                     }
-
+                    
                     
                 }
                 if object?.valueForKey(("pic_2")) != nil{
@@ -92,7 +94,7 @@ class SubViewPetInfoViewController: UIViewController {
                             
                         }
                     }
-
+                    
                     
                 }
                 if object?.valueForKey(("pic_3")) != nil{
@@ -105,7 +107,7 @@ class SubViewPetInfoViewController: UIViewController {
                             
                         }
                     }
-
+                    
                 }
                 if object?.valueForKey(("pic_4")) != nil{
                     let pic = (object?["pic_4"] as! PFFile)
@@ -117,7 +119,7 @@ class SubViewPetInfoViewController: UIViewController {
                             
                         }
                     }
-
+                    
                 }
                 if object?.valueForKey(("pic_5")) != nil{
                     let pic = (object?["pic_5"] as! PFFile)
@@ -129,7 +131,7 @@ class SubViewPetInfoViewController: UIViewController {
                             
                         }
                     }
-
+                    
                 }
                 if object?.valueForKey(("pic_6")) != nil{
                     let pic = (object?["pic_6"] as! PFFile)
@@ -141,12 +143,12 @@ class SubViewPetInfoViewController: UIViewController {
                             
                         }
                     }
-
+                    
                 }
             }
         }
-
-
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -155,49 +157,54 @@ class SubViewPetInfoViewController: UIViewController {
     }
     
 
-    @IBAction func pic1selected(sender: AnyObject) {
-       self.choice = 1
-       self.performSegueWithIdentifier("chooseImage", sender: self)
+    @IBAction func call_number(sender: AnyObject) {
+        
+        
     }
+    
+   
+    @IBAction func pic1selected(sender: AnyObject) {
+        self.choice = 1
+        self.performSegueWithIdentifier("ViewImage", sender: self)
+        
+    }
+    
     
     @IBAction func pic2selected(sender: AnyObject) {
         self.choice = 2
-        self.performSegueWithIdentifier("chooseImage", sender: self)
+        self.performSegueWithIdentifier("ViewImage", sender: self)
     }
     
-  
     @IBAction func pic3selected(sender: AnyObject) {
         self.choice = 3
-        self.performSegueWithIdentifier("chooseImage", sender: self)
+        self.performSegueWithIdentifier("ViewImage", sender: self)
     }
     
     @IBAction func pic4selected(sender: AnyObject) {
         self.choice = 4
-        self.performSegueWithIdentifier("chooseImage", sender: self)
+        self.performSegueWithIdentifier("ViewImage", sender: self)
     }
-    
     
     @IBAction func pic5selected(sender: AnyObject) {
         self.choice = 5
-        self.performSegueWithIdentifier("chooseImage", sender: self)
+        self.performSegueWithIdentifier("ViewImage", sender: self)
     }
     
     @IBAction func pic6selected(sender: AnyObject) {
         self.choice = 6
-        self.performSegueWithIdentifier("chooseImage", sender: self)
+        self.performSegueWithIdentifier("ViewImage", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "chooseImage"
+        if segue.identifier == "ViewImage"
         {
             //set the EditViewController's variable to the name we retrieved from the parse database.
-            if let destinationVC = segue.destinationViewController as? ImageAddViewController{
+            if let destinationVC = segue.destinationViewController as? ViewImageSitterViewController{
                 destinationVC.choice = self.choice
                 destinationVC.key = self.key
             }
         }
-
+        
     }
     
 }
-

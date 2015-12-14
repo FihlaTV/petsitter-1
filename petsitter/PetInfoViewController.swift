@@ -24,27 +24,7 @@ class PetInfoViewController: UIViewController {
     
     @IBOutlet weak var petBio: UITextView!
     
-    @IBOutlet weak var petFeed: UITextView!
-    
-    @IBOutlet weak var petAct: UITextView!
-    
-    @IBOutlet weak var ContactName: UILabel!
-    
-    @IBOutlet weak var contactNumber: UILabel!
-    
     @IBOutlet weak var segSwitch: UISegmentedControl!
-    
-    @IBOutlet weak var pet1: UIImageView!
-    
-    @IBOutlet weak var pet2: UIImageView!
-    
-    @IBOutlet weak var pet3: UIImageView!
-    
-    @IBOutlet weak var pet4: UIImageView!
-    
-    @IBOutlet weak var pet5: UIImageView!
-    
-    @IBOutlet weak var pet6: UIImageView!
     
     var name_of_pet = String()
     var key_of_pet = String()
@@ -54,25 +34,31 @@ class PetInfoViewController: UIViewController {
     var contact_name = String()
     var contact_number = String()
     
-    //var pull_image = UIImage()
+    var sub:SubViewPetInfoViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewLogContainer.hidden = true
+        viewPetInfoContainer.hidden = false
+        
+        //let textfield: UITextField = self.childViewControllers.last?.usernameTextField! as UITextField
         
     }
     
     override func viewWillAppear(animated: Bool) {
         spinner.startAnimating()
-        petName.text = name_of_pet
         gatherImage(key_of_pet)
         fillInformation()
         spinner.stopAnimating()
-        viewLogContainer.hidden = true
-        viewPetInfoContainer.hidden = false
+        
     }
     
     func fillInformation(){
+       petBio.text = pet_bio_passed
+       petName.text = name_of_pet
+        
        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,9 +71,11 @@ class PetInfoViewController: UIViewController {
         case 0:
             viewLogContainer.hidden = true
             viewPetInfoContainer.hidden = false
+            
         case 1:
             viewLogContainer.hidden = false
             viewPetInfoContainer.hidden = true
+            
         default:
             break;
         }
@@ -100,6 +88,7 @@ class PetInfoViewController: UIViewController {
         
         let query = PFQuery(className: "Pet_photos")
         query.whereKey("pet_key", equalTo: key)
+        query.selectKeys((["profile_pic"]))
         query.getFirstObjectInBackgroundWithBlock {
             (object: PFObject?, error: NSError?) -> Void in
             if error != nil || object == nil {
@@ -121,4 +110,39 @@ class PetInfoViewController: UIViewController {
         }
     }
 
+    @IBAction func segueToEdit(sender: AnyObject) {
+        self.performSegueWithIdentifier("goToEditSegue", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //first case, when a user decides to edit their pets information.
+        if segue.identifier == "goToEditSegue"
+        {
+            //set the EditViewController's variable to the name we retrieved from the parse database.
+            if let destinationVC = segue.destinationViewController as? EditInfoViewController{
+                destinationVC.pet_key = self.key_of_pet
+            }
+        }
+        if segue.identifier == "subInfo"
+            {
+                //set the EditViewController's variable to the name we retrieved from the parse database.
+                if let destinationVC = segue.destinationViewController as? SubViewPetInfoViewController{
+                    destinationVC.key = self.key_of_pet
+                    destinationVC.feed_passed = self.feed_passed
+                    destinationVC.act_passed = self.act_passed
+                    destinationVC.contact_number = self.contact_number
+                    destinationVC.contact_name = self.contact_name
+                }
+        }
+        if segue.identifier == "subLog"{
+            
+            if let destinationVC = segue.destinationViewController as? ViewLogContainerTableViewController{
+                destinationVC.key = self.key_of_pet
+            }
+        }
+
+
+    }
+ 
 }

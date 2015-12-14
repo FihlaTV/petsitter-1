@@ -50,6 +50,10 @@ class PetsImCaringForController: UITableViewController {
                         self.bio = (object!.valueForKey("pet_bio"))! as! String
                         self.name = (object!.valueForKey("pet_name"))! as! String
                         
+                        //Set the status as true for pet_sit
+                        object!.setValue(true, forKey: "pet_sit_status")
+                        object!.saveInBackground()
+                        
                         print(self.pet_key," : Key retrieved from db")
                         print(self.activityInst," : activity retrieved from db")
                         print(self.emerName," : emername retrieved from db")
@@ -156,37 +160,39 @@ class PetsImCaringForController: UITableViewController {
     }
     
     //uncomment when view controller and segue are added
-    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    self.performSegueWithIdentifier("sitInfoSegue", sender: self)
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("petInfo", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "sitInfoSegue"
-    {
-    if let destination = segue.destinationViewController as? SitInfoViewController {
-    if let petIndex = tableView.indexPathForSelectedRow?.row {
-    let corePet = corePets[petIndex]
+        if segue.identifier == "petInfo"
+        {
+            if let destination = segue.destinationViewController as? PetImWatchingInfoViewController{
+                if let petIndex = tableView.indexPathForSelectedRow?.row {
+                    let corePet = corePets[petIndex]
     
-    let name = corePet.valueForKeyPath("sit_name") as! String
-    let key = corePet.valueForKey("sit_key") as! String
-    let bio = corePet.valueForKey("sit_bio") as! String
-    let feed = corePet.valueForKey("sit_feeding") as! String
-    let act = corePet.valueForKey("sit_activity") as! String
-    let contact = corePet.valueForKey("sit_contact") as! String
-    let number = corePet.valueForKey("sit_number") as! String
+                    let name = corePet.valueForKeyPath("sit_name") as! String
+                    let key = corePet.valueForKey("sit_key") as! String
+                    let bio = corePet.valueForKey("sit_bio") as! String
+                    let feed = corePet.valueForKey("sit_feeding") as! String
+                    let act = corePet.valueForKey("sit_activity") as! String
+                    let contact = corePet.valueForKey("sit_contact") as! String
+                    let number = corePet.valueForKey("sit_number") as! String
     
-    destination.name_of_pet = name
-    destination.key_of_pet = key
-    destination.pet_bio_passed = bio
-    destination.feed_passed = feed
-    destination.act_passed = act
-    destination.contact_name = contact
-    destination.contact_number = number
-    
+                    destination.name_of_pet = name
+                    destination.key_of_pet = key
+                    destination.pet_bio_passed = bio
+                    destination.feed_passed = feed
+                    destination.act_passed = act
+                    destination.contact_name = contact
+                    destination.contact_number = number
+                    
+                    
+                    
+                }
+            }
+        }
     }
-    }
-    }
-    }*/
     
     //=========================================
     

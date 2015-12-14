@@ -91,10 +91,11 @@ class MyPetsTableViewController: UITableViewController {
         let corePet = corePets[indexPath.row]
         let petKey = corePet.valueForKey("pet_key") as! String
         let petName = corePet.valueForKey("pet_name") as! String
-        print(petKey)
+        
         
         let query = PFQuery(className: "Pet_photos")
         query.whereKey("pet_key", equalTo: petKey)
+        query.selectKeys(["profile_pic"])
         query.getFirstObjectInBackgroundWithBlock {
             (object: PFObject?, error: NSError?) -> Void in
             if error != nil || object == nil {
@@ -102,7 +103,7 @@ class MyPetsTableViewController: UITableViewController {
             } else {
                 //Retrieves the picture as a PFFile "parse framework file"
                 pet_pic.append(object?["profile_pic"] as! PFFile)
-
+                
                 //extra step required to transform the pffile object into a uiimage
                 pet_pic[0].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
                     if error == nil {
@@ -131,12 +132,15 @@ class MyPetsTableViewController: UITableViewController {
             let key_for_Delete = corePet.valueForKey("pet_key") as! String
             let query = PFQuery(className: "Pet")
             query.whereKey("objectId", equalTo: key_for_Delete)
+            
             //Look on parse for inner join query, then we should be able to delete the related table.
             query.getFirstObjectInBackgroundWithBlock {
                 (object: PFObject?, error: NSError?) -> Void in
+                
                 if error != nil || object == nil {
                     print("The getFirstObject request failed in my pets table view controller.")
-                } else {
+                }
+                else {
                     // The find succeeded and now will delete the object in the database.
                     print("Delete started")
                     object?.deleteInBackground()

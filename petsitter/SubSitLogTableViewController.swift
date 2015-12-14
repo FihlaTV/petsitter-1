@@ -1,8 +1,8 @@
 //
-//  ViewLogContainerTableViewController.swift
+//  SubSitLogTableViewController.swift
 //  petsitter
 //
-//  Created by Devin Clark on 12/12/15.
+//  Created by MU IT Program on 12/13/15.
 //  Copyright © 2015 Devin Clark. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import Bolts
 
-class ViewLogContainerTableViewController: UITableViewController {
+class SubSitLogTableViewController: UITableViewController {
 
     var key = String()
     var array = [String]()
@@ -30,8 +30,6 @@ class ViewLogContainerTableViewController: UITableViewController {
     
     func loadPetLogs(){
         let query = PFQuery(className:"Pet_log")
-        
-        //query.selectKeys(["objectId, pet_key, createdAt, log_info"])
         query.whereKey("pet_key", equalTo:self.key)
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -42,7 +40,6 @@ class ViewLogContainerTableViewController: UITableViewController {
                 // Do something with the found objects
                 if let objects = objects {
                     for object in objects {
-                        print(object.valueForKey("createdAt"))
                         print(object.objectId)
                         let temp = object.valueForKey("objectId") as! String
                         let created = object.valueForKey("createdAt") as! NSDate
@@ -59,48 +56,42 @@ class ViewLogContainerTableViewController: UITableViewController {
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+
     }
-   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        //print(self.array.count)
+        
         return self.array.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell", forIndexPath: indexPath) as! LogOwnerTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("logCell", forIndexPath: indexPath) as! SubSitLogTableViewCell
         let format = NSDateFormatter()
         format.dateStyle = .LongStyle
         
         let temp = log_dates[indexPath.row]
         
-        print(temp)
+        cell.titleLabel.text = format.stringFromDate(temp)
         
-        let sin = format.stringFromDate(temp)
-        print(sin)
-        cell.titleLabel.text = sin
         return cell
     }
     
-    @IBAction func newLogButton(sender: AnyObject) {
-        print(array.count)
-        self.performSegueWithIdentifier("newLog", sender: self)
-    }
-    
+   
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("viewLog", sender: self)
+        self.performSegueWithIdentifier("selectedLog", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -111,22 +102,23 @@ class ViewLogContainerTableViewController: UITableViewController {
             }
         }
         
-        if segue.identifier == "viewLog"{
-            if let destination = segue.destinationViewController as? SelectedLogViewController {
+        if segue.identifier == "selectedLog"{
+            if let destination = segue.destinationViewController as? SelectSitLogViewController {
                 
                 if let logIndex = tableView.indexPathForSelectedRow?.row {
                     let info = log_info[logIndex]
                     let key = id[logIndex]
                     destination.key = key
-                    destination.logInfo = info
+                    destination.info = info
                     
                 }
             }
             
         }
+
     }
-
-
-  
+    
+    
+    
     
 }
