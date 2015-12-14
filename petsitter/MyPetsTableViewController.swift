@@ -95,6 +95,7 @@ class MyPetsTableViewController: UITableViewController {
         
         let query = PFQuery(className: "Pet_photos")
         query.whereKey("pet_key", equalTo: petKey)
+        query.selectKeys(["profile_pic"])
         query.getFirstObjectInBackgroundWithBlock {
             (object: PFObject?, error: NSError?) -> Void in
             if error != nil || object == nil {

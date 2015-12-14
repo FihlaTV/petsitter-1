@@ -47,13 +47,15 @@ class AddLogViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         else{
             log_info = desc.text!
+            
+            let newLog = PFObject(className: "Pet_log")
+
+            newLog["pet_key"] = self.key
+            newLog["pet_id"] = PFObject(withoutDataWithClassName: "Pet", objectId: self.key)
+            newLog["log_info"] = log_info
+            newLog.saveInBackground()
             //image was not added.
             if image.image == nil{
-                let newLog = PFObject(className: "Pet_log")
-                newLog["pet_key"] = self.key
-                newLog["pet_id"] = PFObject(withoutDataWithClassName: "Pet", objectId: self.key)
-                newLog["log_info"] = log_info
-                newLog.saveInBackground()
                 
                 
                 spinner.stopAnimating()
@@ -67,10 +69,7 @@ class AddLogViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
             //image was added.
             else{
-                let newLog = PFObject(className: "Pet_log")
-                newLog["pet_key"] = self.key
-                newLog["pet_id"] = PFObject(withoutDataWithClassName: "Pet", objectId: self.key)
-                newLog["log_info"] = log_info
+                
                 
                 
                 let imageToBeUploaded = self.image.image

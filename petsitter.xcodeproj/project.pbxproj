@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6723F4C01C1F4F90000FA034 /* ViewImageSitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6723F4BF1C1F4F90000FA034 /* ViewImageSitterViewController.swift */; };
 		673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673E529E1C0EB86A006F312A /* PetCreationViewController.swift */; };
 		673E52A21C0EB9A4006F312A /* paw-print-outline_318-35039.png in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */; };
 		673E52A41C0EBA56006F312A /* mypetspawprint_720.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */; };
@@ -20,6 +21,8 @@
 		675869E31C0FF0DB006B59EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675869E21C0FF0DB006B59EF /* Main.storyboard */; };
 		675869E51C0FF18E006B59EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */; };
 		675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */; };
+		675B16B91C1F22C000081103 /* SelectSitLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B16B81C1F22C000081103 /* SelectSitLogViewController.swift */; };
+		675B16BB1C1F2BE800081103 /* ImageAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B16BA1C1F2BE800081103 /* ImageAddViewController.swift */; };
 		6778DC601C192854008F6BD4 /* CaringForTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */; };
 		67926C311C0D42520031B13D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C301C0D42520031B13D /* AudioToolbox.framework */; };
 		67926C331C0D43440031B13D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67926C321C0D43440031B13D /* CFNetwork.framework */; };
@@ -64,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6723F4BF1C1F4F90000FA034 /* ViewImageSitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewImageSitterViewController.swift; sourceTree = "<group>"; };
 		673E529E1C0EB86A006F312A /* PetCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCreationViewController.swift; sourceTree = "<group>"; };
 		673E52A11C0EB9A4006F312A /* paw-print-outline_318-35039.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paw-print-outline_318-35039.png"; sourceTree = "<group>"; };
 		673E52A31C0EBA56006F312A /* mypetspawprint_720.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mypetspawprint_720.jpg; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		675869E41C0FF18E006B59EF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		675869E71C0FF238006B59EF /* petsitter 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "petsitter 2.xcdatamodel"; sourceTree = "<group>"; };
 		675869E81C0FF238006B59EF /* petsitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = petsitter.xcdatamodel; sourceTree = "<group>"; };
+		675B16B81C1F22C000081103 /* SelectSitLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSitLogViewController.swift; sourceTree = "<group>"; };
+		675B16BA1C1F2BE800081103 /* ImageAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAddViewController.swift; sourceTree = "<group>"; };
 		6778DC5F1C192854008F6BD4 /* CaringForTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaringForTableViewCell.swift; sourceTree = "<group>"; };
 		67926C301C0D42520031B13D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		67926C321C0D43440031B13D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -225,9 +231,12 @@
 				675869E61C0FF238006B59EF /* petsitter.xcdatamodeld */,
 				67C4D7D71C1CF81C005F2C64 /* EditInfoViewController.swift */,
 				956C21191C1C9BC10059D9DD /* SubViewPetInfoViewController.swift */,
+				675B16B81C1F22C000081103 /* SelectSitLogViewController.swift */,
 				674C69711C1E538D001B3184 /* SelectedLogViewController.swift */,
+				6723F4BF1C1F4F90000FA034 /* ViewImageSitterViewController.swift */,
 				67409E921C1E306E00D97050 /* LogOwnerTableViewCell.swift */,
 				674C696F1C1E48EA001B3184 /* SubSitLogTableViewController.swift */,
+				675B16BA1C1F2BE800081103 /* ImageAddViewController.swift */,
 				673E529E1C0EB86A006F312A /* PetCreationViewController.swift */,
 				67926C481C0D45780031B13D /* PetTableViewCell.swift */,
 				9555D1491C173EB7008FA280 /* PetsImCaringForController.swift */,
@@ -361,12 +370,15 @@
 			files = (
 				675869E91C0FF238006B59EF /* petsitter.xcdatamodeld in Sources */,
 				955C53F21BF516A000F6E4CE /* AppDelegate.swift in Sources */,
+				675B16BB1C1F2BE800081103 /* ImageAddViewController.swift in Sources */,
 				674C69721C1E538D001B3184 /* SelectedLogViewController.swift in Sources */,
 				9555D14A1C173EB7008FA280 /* PetsImCaringForController.swift in Sources */,
 				67926C491C0D45780031B13D /* PetTableViewCell.swift in Sources */,
 				95C52EF01BFE590B00C136E0 /* MyPetsTableViewController.swift in Sources */,
 				956C211A1C1C9BC10059D9DD /* SubViewPetInfoViewController.swift in Sources */,
 				67B324CF1C1E0D56002673F5 /* SubSitInfoViewController.swift in Sources */,
+				675B16B91C1F22C000081103 /* SelectSitLogViewController.swift in Sources */,
+				6723F4C01C1F4F90000FA034 /* ViewImageSitterViewController.swift in Sources */,
 				67409E931C1E306E00D97050 /* LogOwnerTableViewCell.swift in Sources */,
 				673E529F1C0EB86A006F312A /* PetCreationViewController.swift in Sources */,
 				67409E951C1E465E00D97050 /* SubSitLogTableViewCell.swift in Sources */,

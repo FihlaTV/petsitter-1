@@ -31,11 +31,12 @@ class SubAddLogContainerViewController: UIViewController {
     
     
     @IBAction func saveDates(sender: AnyObject) {
-        var code = arc4random_uniform(10000000) + 100000
+        let code = arc4random_uniform(10000000) + 100000
         code_displayed = code.description
         print(self.key)
         let query = PFQuery(className: "Pet")
         query.whereKey("objectId", equalTo: self.key)
+        query.selectKeys(["pet_code, start_date, end_date"])
         query.getFirstObjectInBackgroundWithBlock {
             (object: PFObject?, error: NSError?) -> Void in
             if error != nil || object == nil {
@@ -70,7 +71,7 @@ class SubAddLogContainerViewController: UIViewController {
     func configurationTextField(textField: UITextField!)
     {
         if let aTextField = textField {
-            textField.text = code_displayed
+            aTextField.text = code_displayed
             
 
         }

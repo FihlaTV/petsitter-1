@@ -131,6 +131,7 @@ class PetImWatchingInfoViewController: UIViewController {
                 destinationVC.act_passed = self.act_passed
                 destinationVC.contact_number = self.contact_number
                 destinationVC.contact_name = self.contact_name
+                destinationVC.key = self.key_of_pet
             }
         }
         if segue.identifier == "sitLog"{

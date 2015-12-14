@@ -88,6 +88,7 @@ class PetInfoViewController: UIViewController {
         
         let query = PFQuery(className: "Pet_photos")
         query.whereKey("pet_key", equalTo: key)
+        query.selectKeys((["profile_pic"]))
         query.getFirstObjectInBackgroundWithBlock {
             (object: PFObject?, error: NSError?) -> Void in
             if error != nil || object == nil {
@@ -127,6 +128,7 @@ class PetInfoViewController: UIViewController {
             {
                 //set the EditViewController's variable to the name we retrieved from the parse database.
                 if let destinationVC = segue.destinationViewController as? SubViewPetInfoViewController{
+                    destinationVC.key = self.key_of_pet
                     destinationVC.feed_passed = self.feed_passed
                     destinationVC.act_passed = self.act_passed
                     destinationVC.contact_number = self.contact_number

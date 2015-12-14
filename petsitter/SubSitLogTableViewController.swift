@@ -15,6 +15,9 @@ class SubSitLogTableViewController: UITableViewController {
     var key = String()
     var array = [String]()
     var log_dates = [NSDate]()
+    var log_info = [String]()
+    var log_image = [PFFile]()
+    var id = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +36,15 @@ class SubSitLogTableViewController: UITableViewController {
             
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
+                print("Successfully retrieved \(objects!.count) dates.")
                 // Do something with the found objects
                 if let objects = objects {
                     for object in objects {
                         print(object.objectId)
-                        let temp = object["pet_key"] as! String
+                        let temp = object.valueForKey("objectId") as! String
                         let created = object.valueForKey("createdAt") as! NSDate
+                        self.log_info.append(object["log_info"] as! String)
+                        self.id.append(temp)
                         self.array.append(temp)
                         self.log_dates.append(created)
                     }
@@ -51,6 +56,7 @@ class SubSitLogTableViewController: UITableViewController {
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,7 +90,9 @@ class SubSitLogTableViewController: UITableViewController {
     }
     
    
-    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("selectedLog", sender: self)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "newLog"
@@ -93,6 +101,21 @@ class SubSitLogTableViewController: UITableViewController {
                 destination.key = self.key
             }
         }
+        
+        if segue.identifier == "selectedLog"{
+            if let destination = segue.destinationViewController as? SelectSitLogViewController {
+                
+                if let logIndex = tableView.indexPathForSelectedRow?.row {
+                    let info = log_info[logIndex]
+                    let key = id[logIndex]
+                    destination.key = key
+                    destination.info = info
+                    
+                }
+            }
+            
+        }
+
     }
     
     

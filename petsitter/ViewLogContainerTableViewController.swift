@@ -30,27 +30,24 @@ class ViewLogContainerTableViewController: UITableViewController {
     
     func loadPetLogs(){
         let query = PFQuery(className:"Pet_log")
+        
+        //query.selectKeys(["objectId, pet_key, createdAt, log_info"])
         query.whereKey("pet_key", equalTo:self.key)
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
                 // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
+                print("Successfully retrieved \(objects!.count) dates.")
                 // Do something with the found objects
                 if let objects = objects {
                     for object in objects {
+                        print(object.valueForKey("createdAt"))
                         print(object.objectId)
                         let temp = object.valueForKey("objectId") as! String
                         let created = object.valueForKey("createdAt") as! NSDate
                         self.log_info.append(object["log_info"] as! String)
                         self.id.append(temp)
-                        if object["log_photo"] == nil{
-                            print("no image with log")
-                        }
-                        else{
-                            self.log_image.append(object["log_photo"] as! PFFile)
-                        }
                         self.array.append(temp)
                         self.log_dates.append(created)
                     }
@@ -77,7 +74,7 @@ class ViewLogContainerTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
+        //print(self.array.count)
         return self.array.count
     }
 
