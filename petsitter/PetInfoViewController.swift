@@ -38,7 +38,8 @@ class PetInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewLogContainer.hidden = true
+        viewPetInfoContainer.hidden = false
         
         //let textfield: UITextField = self.childViewControllers.last?.usernameTextField! as UITextField
         
@@ -49,8 +50,7 @@ class PetInfoViewController: UIViewController {
         gatherImage(key_of_pet)
         fillInformation()
         spinner.stopAnimating()
-        viewLogContainer.hidden = true
-        viewPetInfoContainer.hidden = false
+        
     }
     
     func fillInformation(){
