@@ -102,7 +102,7 @@ class MyPetsTableViewController: UITableViewController {
             } else {
                 //Retrieves the picture as a PFFile "parse framework file"
                 pet_pic.append(object?["profile_pic"] as! PFFile)
-
+                
                 //extra step required to transform the pffile object into a uiimage
                 pet_pic[0].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
                     if error == nil {

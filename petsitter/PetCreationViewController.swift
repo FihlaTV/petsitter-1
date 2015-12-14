@@ -258,6 +258,7 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
         }
         
         if a == true && b == true && c == true && d == true && e == true && f == true && g == true{
+            spinner.startAnimating()
             createPetInDatabase(petName, bio: petBio, feed: petFeed, act: petAct, contact: petContact, number: petNumber)
         }
     }
@@ -360,6 +361,7 @@ class PetCreationViewController: UIViewController, UIImagePickerControllerDelega
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else{
+            spinner.stopAnimating()
             let alertController = UIAlertController(title: "Error!", message: "The image selected is greater than 10Mb and is too large to be uploaded, please select a different image!", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
