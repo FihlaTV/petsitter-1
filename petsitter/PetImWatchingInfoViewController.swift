@@ -38,6 +38,7 @@ class PetImWatchingInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -45,8 +46,22 @@ class PetImWatchingInfoViewController: UIViewController {
         fillInformation()
         gatherImage(key_of_pet)
         
-        subInfoContainer.hidden = false
-        subLogContainer.hidden = true
+        switch segSwitch.selectedSegmentIndex {
+        case 0:
+            subLogContainer.hidden = true
+            subInfoContainer.hidden = false
+            //segSwitch.hidden = false
+            //self.performSegueWithIdentifier("sitInfo", sender: self)
+            
+        case 1:
+            subLogContainer.hidden = false
+            subInfoContainer.hidden = true
+            segSwitch.hidden = false
+            
+        default:
+            break;
+        }
+
        
     }
     
