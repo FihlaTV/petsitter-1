@@ -20,6 +20,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        var pageController = UIPageControl.appearance()
+        
+        
+        func colorWithHexString (hex:String) -> UIColor {
+            var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+            
+            if (cString.hasPrefix("#")) {
+                cString = (cString as NSString).substringFromIndex(1)
+            }
+            
+            if (cString.characters.count != 6) {
+                return UIColor.grayColor()
+            }
+            
+            let rString = (cString as NSString).substringToIndex(2)
+            let gString = ((cString as NSString).substringFromIndex(2) as NSString).substringToIndex(2)
+            let bString = ((cString as NSString).substringFromIndex(4) as NSString).substringToIndex(2)
+            
+            var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+            NSScanner(string: rString).scanHexInt(&r)
+            NSScanner(string: gString).scanHexInt(&g)
+            NSScanner(string: bString).scanHexInt(&b)
+            
+            
+            return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
+        }
+        
+        UINavigationBar.appearance().backgroundColor = colorWithHexString("#236566")
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = colorWithHexString("#236566")
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+        UITabBar.appearance().backgroundColor = colorWithHexString("#236566")
+        
         //Key to the repository, where I'm storing the data for our app.
         Parse.setApplicationId("epBrGZNjQNbDIMp5qaOfDZGKCz88rxDJLrGCUWa7", clientKey: "tprim3FBXR7QokXnWtv44WQ16K0DtWw49XDARMvH")
         return true
