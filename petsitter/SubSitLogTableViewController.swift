@@ -22,6 +22,7 @@ class SubSitLogTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPetLogs()
+        tableView.reloadData()
     }
     
     override func viewWillAppear(animated: Bool) {

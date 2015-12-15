@@ -63,7 +63,7 @@ class AddLogViewController: UIViewController, UIImagePickerControllerDelegate, U
                 let alertController = UIAlertController(title: "Success!", message: "Your pet log has been successfully created.", preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
                 alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
-                    self.navigationController?.popViewControllerAnimated(true)
+                    self.navigationController?.popToRootViewControllerAnimated(true)
                 }))
                 self.presentViewController(alertController, animated: true, completion: nil)
             }

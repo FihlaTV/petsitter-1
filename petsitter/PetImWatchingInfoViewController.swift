@@ -47,6 +47,7 @@ class PetImWatchingInfoViewController: UIViewController {
         
         subInfoContainer.hidden = false
         subLogContainer.hidden = true
+       
     }
     
     func gatherImage(key: String){
